@@ -1,9 +1,14 @@
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
-import gsap from 'gsap';
-import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
+import * as THREE from 'https://unpkg.com/three@0.165.0/build/three.module.js';
+
+import { GLTFLoader } from 'https://unpkg.com/three@0.165.0/examples/jsm/loaders/GLTFLoader.js';
+
+import { OrbitControls } from 'https://unpkg.com/three@0.165.0/examples/jsm/controls/OrbitControls.js';
+
+import { CSS2DRenderer, CSS2DObject } from 'https://unpkg.com/three@0.165.0/examples/jsm/renderers/CSS2DRenderer.js';
+
+import { RGBELoader } from 'https://unpkg.com/three@0.165.0/examples/jsm/loaders/RGBELoader.js';
+
+import gsap from 'https://cdn.skypack.dev/gsap';
 
 
 // --- Constants & Globals ---

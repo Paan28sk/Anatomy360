@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <title>HeartBeat❤❤❤</title>
+
+    <style>
+        body{
+            background-image: linear-gradient(#FFE0E0,#FFF5F5);
+        }
+        html, body {
+            height: 100%;    
+            margin: 0;         
+            padding: 0;        
+            border: 5px solid #D4B5B5;
+            box-sizing: border-box; 
+            overflow: hidden;
+        }
+        p{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 90px;
+            display: inline;
+            justify-content: center;
+            align-self: center;
+            text-shadow: 10px 10px 7px #FFB3A7;
+        }
+        #heart{
+            width: 1100px;
+            position: absolute;
+            transform: translate(18%,18.5%);
+        }
+        #titlefront{
+            font-size: 80px;
+            color: #B31C1C;
+            text-shadow: none;
+        }
+        #title{
+            font-size: 80px;
+            background: linear-gradient(to right,#B31C1C,#355ACA); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent; 
+            text-shadow: none;
+        }
+        #titleblue{
+            font-size: 80px;
+            color: #355ACA;
+            text-shadow: none;
+        }
+        #titlebox{
+            position: absolute;
+            transform: translate(6%,32%);
+            z-index: 1;
+        }
+        #shadow{
+            font-size: 80px;
+            color: #FFB6B6;
+            text-shadow: none;
+            position: absolute;
+            transform: translate(6%,-54%);
+            z-index: 0;
+        }
+        #doctor{
+            width: 200px;
+            position: absolute;
+            transform: translate(-15%,253%);
+        }
+        #chatbox{
+            width: 150px;
+            position: absolute;
+            transform: translate(52%,272%);
+        }
+        #hint{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 11px;
+            color: #000000;
+            margin-top: -20px;
+            text-shadow: none;
+            position: absolute;
+            text-align: center;
+            transform: translate(91%,722%);
+            z-index: 1;
+            white-space: nowrap;
+        }
+        #react{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 15px;
+            color: #000000;
+            margin-top: -20px;
+            text-shadow: none;
+            position: absolute;
+            text-align: center;
+            transform: translate(211%,3222%);
+            z-index: 1;
+            white-space: nowrap;
+        }
+        #backBtn{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 19px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            text-shadow:
+                -1px -1px #655A5A,
+                 1px -1px #655A5A,
+                -1px  1px #655A5A,
+                 1px  1px #655A5A,
+                 0px -1px #655A5A,
+                 0px  1px #655A5A,
+                -1px  0px #655A5A,
+                 1px  0px #655A5A;
+            padding: 15px;
+            background-color: #D68389;
+            border: 5px solid #AB444C;
+            border-radius: 30px;
+            position: absolute;
+            transform: translate(460%,1110%);
+        }
+        #question{
+            font-size: 80px;
+            position: absolute;
+            border: none;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+            padding: 10px;
+            padding-top: 3px;
+            padding-left: 15px;
+            padding-right: 15px;
+            transform: translate(955%,120%);
+        }
+        #quiztext{
+            font-size: 1.3rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+            color: #DCEA10;
+            position: absolute; 
+            transform: translate(623%,720%);
+            white-space: nowrap;
+            z-index: 1;
+            text-shadow:
+                -2px -2px #8A930E,
+                 2px -2px #8A930E,
+                -2px  2px #8A930E,
+                 2px  2px #8A930E,
+                 0px -2px #8A930E,
+                 0px  2px #8A930E,
+                -2px  0px #8A930E,
+                 2px  0px #8A930E;
+        }
+        
+        #temp1{
+            padding: 6.5px;
+            border-radius: 100%;
+            position: absolute;
+            border: none;
+            z-index: 3;
+            background-color: #FFD700;
+            transform: translate(4735%,2890%);
+        }
+        #temp1shadow{
+            padding: 30px;
+            border-radius: 100%;
+            opacity: 0.2;
+            position: absolute;
+            border: none;
+            z-index: 3;
+            background-color: #FFD700;
+            transform: translate(990%,585%);
+            box-shadow: 
+            -20px -20px 15px #FFD700,
+            20px -20px 15px #FFD700,
+            -20px 20px 15px #FFD700,
+            20px 20px 15px #FFD700,
+            0px -20px 15px #FFD700,
+            0px 20px 15px #FFD700,
+            -20px 0px 15px #FFD700,
+            20px 0px 15px #FFD700;
+        }
+        #temp2{
+            padding: 6.5px;
+            border-radius: 100%;
+            position: absolute;
+            border: none;
+            z-index: 3;
+            background-color: #FFD700;
+            transform: translate(5035%,3530%);
+        }
+        #temp2shadow{
+            padding: 30px;
+            border-radius: 100%;
+            opacity: 0.2;
+            position: absolute;
+            border: none;
+            z-index: 3;
+            background-color: #FFD700;
+            transform: translate(1050%,722%);
+            box-shadow: 
+            -20px -20px 15px #FFD700,
+            20px -20px 15px #FFD700,
+            -20px 20px 15px #FFD700,
+            20px 20px 15px #FFD700,
+            0px -20px 15px #FFD700,
+            0px 20px 15px #FFD700,
+            -20px 0px 15px #FFD700,
+            20px 0px 15px #FFD700;
+        }
+        #temp3{
+            padding: 6.5px;
+            border-radius: 100%;
+            position: absolute;
+            border: none;
+            z-index: 3;
+            background-color: #FFD700;
+            transform: translate(6160%,4120%);
+        }
+        #temp3shadow{
+            padding: 30px;
+            border-radius: 100%;
+            opacity: 0.2;
+            position: absolute;
+            border: none;
+            z-index: 3;
+            background-color: #FFD700;
+            transform: translate(1289%,856%);
+            box-shadow: 
+            -20px -20px 15px #FFD700,
+            20px -20px 15px #FFD700,
+            -20px 20px 15px #FFD700,
+            20px 20px 15px #FFD700,
+            0px -20px 15px #FFD700,
+            0px 20px 15px #FFD700,
+            -20px 0px 15px #FFD700,
+            20px 0px 15px #FFD700;
+        }
+        #temp4{
+            padding: 6.5px;
+            border-radius: 100%;
+            position: absolute;
+            border: none;
+            z-index: 3;
+            background-color: #FFD700;
+            transform: translate(6990%,4715%);
+        }
+        #temp4shadow{
+            padding: 30px;
+            border-radius: 100%;
+            opacity: 0.2;
+            position: absolute;
+            border: none;
+            z-index: 3;
+            background-color: #FFD700;
+            transform: translate(1476%,970%);
+            box-shadow: 
+            -20px -20px 15px #FFD700,
+            20px -20px 15px #FFD700,
+            -20px 20px 15px #FFD700,
+            20px 20px 15px #FFD700,
+            0px -20px 15px #FFD700,
+            0px 20px 15px #FFD700,
+            -20px 0px 15px #FFD700,
+            20px 0px 15px #FFD700;
+        }
+        #sino{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 17px;
+            justify-content: center;
+            align-self: center;
+            color: #F7F7F7;
+            padding: 10px;
+            background-color: #09567B;
+            border: 7px solid #0A3F59;
+            border-radius: 40px;
+            position: absolute;
+            z-index: 3;
+            transform: translate(201%,535%);
+            box-shadow: 
+            7px 10px 10px #0F476191,
+            12px -2px 10px #0F476191;
+            transition: transform 0.7s ease;
+        }
+        #sino1{
+            font-size: 0.9rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+            color: #FFFFFF; 
+            white-space: nowrap;
+            z-index: 3;
+            text-align: center;
+            position: relative;
+            left: 5%;
+            top: -2%;
+            text-shadow:
+                -2px -2px #1B313C,
+                 2px -2px #1B313C,
+                -2px  2px #1B313C,
+                 2px  2px #1B313C,
+                 0px -2px #1B313C,
+                 0px  2px #1B313C,
+                -2px  0px #1B313C,
+                 2px  0px #1B313C;
+        }
+        #sino2{
+            font-size: 0.9rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+            color: #FFFFFF;
+            white-space: nowrap;
+            z-index: 3;
+            text-align: center;
+            position: relative;
+            right: 7%;
+            top: -4%;
+            text-shadow:
+                -2px -2px #1B313C,
+                 2px -2px #1B313C,
+                -2px  2px #1B313C,
+                 2px  2px #1B313C,
+                 0px -2px #1B313C,
+                 0px  2px #1B313C,
+                -2px  0px #1B313C,
+                 2px  0px #1B313C;
+        }
+        #sinoBox{
+            justify-content: center;
+            align-self: center;
+            text-align: center;
+            background-color: #09567B;
+            border: 7px solid #0A3F59;
+            border-radius: 40px;
+            position: absolute;
+            z-index: 2;
+            transform: translate(59.5%,235%);
+            width: 370px;
+            height: 150px;
+            opacity: 0;      
+            visibility: hidden;
+            transition: opacity 0.5s ease;
+        }
+        #sinoBox.show {
+            opacity: 1;        
+            visibility: visible;
+        }   
+        #Sno1{
+            position: absolute;
+            width: 130px;
+            rotate: -20deg;
+            transform: translate(-48%,-48%);
+        }
+        #Sno2{
+            position: absolute;
+            width: 130px;
+            rotate: 18deg;
+            transform: translate(35%,-78%);
+        }
+        #sino:hover {
+            transform: translate(201%, 405%);
+        }
+        #atrio{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 17px;
+            justify-content: center;
+            align-self: center;
+            color: #F7F7F7;
+            padding: 10px;
+            background-color: #09567B;
+            border: 7px solid #0A3F59;
+            border-radius: 40px;
+            position: absolute;
+            transform: translate(216%,647%);
+            z-index: 3;
+            box-shadow: 
+            7px 10px 10px #0F476191,
+            12px -2px 10px #0F476191;
+            transition: transform 0.7s ease;
+        }
+        #atrio1{
+            font-size: 0.9rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+            color: #FFFFFF; 
+            white-space: nowrap;
+            z-index: 3;
+            text-align: center;
+            position: relative;
+            right: 12%;
+            top: -4%;
+            text-shadow:
+                -2px -2px #1B313C,
+                 2px -2px #1B313C,
+                -2px  2px #1B313C,
+                 2px  2px #1B313C,
+                 0px -2px #1B313C,
+                 0px  2px #1B313C,
+                -2px  0px #1B313C,
+                 2px  0px #1B313C;
+        }
+        #atrio2{
+            font-size: 0.9rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+            color: #FFFFFF;
+            white-space: nowrap;
+            z-index: 3;
+            text-align: center;
+            position: relative;
+            left: 3%;
+            top: -13%;
+            text-shadow:
+                -2px -2px #1B313C,
+                 2px -2px #1B313C,
+                -2px  2px #1B313C,
+                 2px  2px #1B313C,
+                 0px -2px #1B313C,
+                 0px  2px #1B313C,
+                -2px  0px #1B313C,
+                 2px  0px #1B313C;
+        }
+        #atrioBox{
+            justify-content: center;
+            align-self: center;
+            text-align: center;
+            background-color: #09567B;
+            border: 7px solid #0A3F59;
+            border-radius: 40px;
+            position: absolute;
+            z-index: 2;
+            transform: translate(175%,230%);
+            width: 370px;
+            height: 150px;
+            opacity: 0;      
+            visibility: hidden;
+            transition: opacity 0.5s ease;
+        }
+        #atrioBox.show {
+            opacity: 1;        
+            visibility: visible;
+            z-index: 3;
+        }   
+        #Ano1{
+            position: absolute;
+            width: 130px;
+            rotate: 18deg;
+            transform: translate(110%,-77%);
+        }
+        #Ano2{
+            position: absolute;
+            width: 130px;
+            rotate: -20deg;
+            transform: translate(-143%,-128%);
+        }
+        #atrio:hover {
+            transform: translate(245%,392.5%);
+        }
+        #bundle{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 17px;
+            justify-content: center;
+            align-self: center;
+            color: #F7F7F7;
+            padding: 10px;
+            background-color: #09567B;
+            border: 7px solid #0A3F59;
+            border-radius: 40px;
+            position: absolute;
+            transform: translate(440%,812%);
+            z-index: 3;
+            box-shadow: 
+            7px 10px 10px #0F476191,
+            12px -2px 10px #0F476191;
+            transition: transform 0.7s ease;
+        }
+        #bundle1{
+            font-size: 0.8rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+            color: #FFFFFF; 
+            white-space: nowrap;
+            z-index: 3;
+            text-align: center;
+            position: relative;
+            right: 10%;
+            top: -11%;
+            text-shadow:
+                -2px -2px #1B313C,
+                 2px -2px #1B313C,
+                -2px  2px #1B313C,
+                 2px  2px #1B313C,
+                 0px -2px #1B313C,
+                 0px  2px #1B313C,
+                -2px  0px #1B313C,
+                 2px  0px #1B313C;
+        }
+        #bundle2{
+            font-size: 0.8rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+            color: #FFFFFF;
+            white-space: nowrap;
+            z-index: 3;
+            text-align: center;
+            position: relative;
+            left: 8%;
+            top: -30%;
+            text-shadow:
+                -2px -2px #1B313C,
+                 2px -2px #1B313C,
+                -2px  2px #1B313C,
+                 2px  2px #1B313C,
+                 0px -2px #1B313C,
+                 0px  2px #1B313C,
+                -2px  0px #1B313C,
+                 2px  0px #1B313C;
+        }
+        #bundleBox{
+            justify-content: center;
+            align-self: center;
+            text-align: center;
+            background-color: #09567B;
+            border: 7px solid #0A3F59;
+            border-radius: 40px;
+            position: absolute;
+            z-index: 2;
+            transform: translate(219%,381.5%);
+            width: 370px;
+            height: 128px;
+            opacity: 0;      
+            visibility: hidden;
+            transition: opacity 0.5s ease;
+        }
+        #bundleBox.show {
+            opacity: 1;        
+            visibility: visible;
+            z-index: 3;
+        }   
+        #Bno1{
+            position: absolute;
+            width: 130px;
+            rotate: -18deg;
+            transform: translate(160%,-18%);
+        }
+        #Bno2{
+            position: absolute;
+            width: 130px;
+            rotate: 10deg;
+            transform: translate(-190%,-70%);
+        }
+        #bundle:hover {
+            transform: translate(554%,654%);
+        }
+        #purkinje{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 17px;
+            justify-content: center;
+            align-self: center;
+            color: #F7F7F7;
+            padding: 10px;
+            background-color: #09567B;
+            border: 7px solid #0A3F59;
+            border-radius: 40px;
+            position: absolute;
+            transform: translate(435%,970%);
+            z-index: 3;
+            box-shadow: 
+            7px 10px 10px #0F476191,
+            12px -2px 10px #0F476191;
+            transition: transform 0.7s ease;
+        }
+        #purkinje1{
+            font-size: 0.8rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+            color: #FFFFFF; 
+            white-space: nowrap;
+            z-index: 3;
+            text-align: center;
+            position: relative;
+            right: 16%;
+            top: -12%;
+            text-shadow:
+                -2px -2px #1B313C,
+                 2px -2px #1B313C,
+                -2px  2px #1B313C,
+                 2px  2px #1B313C,
+                 0px -2px #1B313C,
+                 0px  2px #1B313C,
+                -2px  0px #1B313C,
+                 2px  0px #1B313C;
+        }
+        #purkinje2{
+            font-size: 0.8rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+            color: #FFFFFF;
+            white-space: nowrap;
+            z-index: 3;
+            text-align: center;
+            position: relative;
+            left: 8%;
+            top: -32%;
+            text-shadow:
+                -2px -2px #1B313C,
+                 2px -2px #1B313C,
+                -2px  2px #1B313C,
+                 2px  2px #1B313C,
+                 0px -2px #1B313C,
+                 0px  2px #1B313C,
+                -2px  0px #1B313C,
+                 2px  0px #1B313C;
+        }
+        #purkinjeBox{
+            justify-content: center;
+            align-self: center;
+            text-align: center;
+            background-color: #09567B;
+            border: 7px solid #0A3F59;
+            border-radius: 40px;
+            position: absolute;
+            z-index: 2;
+            transform: translate(115%,516%);
+            width: 400px;
+            height: 112px;
+            opacity: 0;      
+            visibility: hidden;
+            transition: opacity 0.5s ease;
+        }
+        #purkinjeBox.show {
+            opacity: 1;        
+            visibility: visible;
+            z-index: 3;
+        }   
+        #Pno1{
+            position: absolute;
+            width: 130px;
+            rotate: -18deg;
+            transform: translate(135%,-30%);
+        }
+        #Pno2{
+            position: absolute;
+            width: 130px;
+            rotate: 10deg;
+            transform: translate(-197%,-62%);
+        }
+        #purkinje:hover {
+            transform: translate(282%,827.5%);
+        }
+    </style>
+</head>
+<body>
+    <img id="heart" src="cp2heart.png" alt="heart">
+    <div id="titlebox">
+    <p id="titlefront">CONDUC</p><p id="title">T THE </p><p id="titleblue">BEAT!</p>
+    </div>
+    <p id="shadow">CONDUCT THE BEAT!</p>
+
+    <img id="doctor" src="cp2doc.gif" alt="doc">
+    <img id="chatbox" src="cp2chatbox.png" alt="chat">
+    <p id="hint">Hover on<br>any<br>part<br>you're<br>interested<br>in!</p>
+    <p id="react">Wow!</p>
+
+    <a href="content.html">
+        <button id="backBtn">BACK TO MAIN</button>
+    </a>
+
+    <a href="hbhero1.html">
+    <button id="question">❓</button>
+    </a>
+    <p id="quiztext">Up for a<br>challenge?</p>
+
+    <button id="temp1"></button>
+    <button id="temp1shadow"></button>
+    <button id="temp2"></button>
+    <button id="temp2shadow"></button>
+    <button id="temp3"></button>
+    <button id="temp3shadow"></button>
+    <button id="temp4"></button>
+    <button id="temp4shadow"></button>
+
+    <button id="sino">Sinoatrial<br>node</button>
+    <button id="atrio">Atrioventricular<br>node</button>
+    <button id="bundle">Bundle of<br>His</button>
+    <button id="purkinje">Purkinje<br>fibres</button>
+
+    <div id="sinoBox">
+        <br>
+        <img id="Sno1" src="no1.png" alt="no1">
+        <p id="sino1">Sends out electrical<br>impulses to start each<br>heartbeat</p>
+        <br><br><br>
+        <p id="sino2">Causes the atria to<br>contract together</p><br>
+        <img id="Sno2" src="no2.png" alt="no2">
+    </div>
+
+    <div id="atrioBox">
+        <br>
+        <img id="Ano1" src="no1.png" alt="no1">
+        <p id="atrio1">Receive impulses<br>from SA node</p>
+        <br><br><br>
+        <p id="atrio2">Delays the signal so<br>the atria finish pumping<br>blood into the<br>ventricles</p><br>
+        <img id="Ano2" src="no2.png" alt="no2">
+    </div>
+
+    <div id="bundleBox">
+        <br>
+        <img id="Bno1" src="no1.png" alt="no1">
+        <p id="bundle1">Carries the signal<br>down to the heart's<br>apex</p>
+        <br><br><br>
+        <p id="bundle2">Divides into right<br>and left branches to<br>reach both ventricles</p><br>
+        <img id="Bno2" src="no2.png" alt="no2">
+    </div>
+
+    <div id="purkinjeBox">
+        <br>
+        <img id="Pno1" src="no1.png" alt="no1">
+        <p id="purkinje1">Spread the impulse<br>through ventricles</p>
+        <br><br><br>
+        <p id="purkinje2">Trigger a strong<br>contraction to pump blood<br>out of the heart</p><br>
+        <img id="Pno2" src="no2.png" alt="no2">
+    </div>
+
+
+
+    <script>
+        const sino = document.getElementById("sino");
+        const atrio = document.getElementById("atrio");
+        const bundle = document.getElementById("bundle");
+        const purkinje = document.getElementById("purkinje");
+
+        const sinoBox = document.getElementById("sinoBox");
+        const atrioBox = document.getElementById("atrioBox");
+        const bundleBox = document.getElementById("bundleBox");
+        const purkinjeBox = document.getElementById("purkinjeBox");
+
+        const hint = document.getElementById("hint");
+        const react = document.getElementById("react");
+
+        react.style.visibility = "hidden";
+
+        sino.addEventListener("mouseenter", () => {
+            sinoBox.classList.add("show");
+            react.style.visibility = "visible";
+            hint.style.visibility = "hidden";
+        });
+
+        sino.addEventListener("mouseleave", () => {
+            sinoBox.classList.remove("show");
+            react.style.visibility = "hidden";
+            hint.style.visibility = "visible";
+        });
+
+        atrio.addEventListener("mouseenter", () => {
+            atrioBox.classList.add("show");
+            react.style.visibility = "visible";
+            hint.style.visibility = "hidden";
+        });
+
+        atrio.addEventListener("mouseleave", () => {
+            atrioBox.classList.remove("show");
+            react.style.visibility = "hidden";
+            hint.style.visibility = "visible";
+        });
+
+        bundle.addEventListener("mouseenter", () => {
+            bundleBox.classList.add("show");
+            react.style.visibility = "visible";
+            hint.style.visibility = "hidden";
+        });
+
+        bundle.addEventListener("mouseleave", () => {
+            bundleBox.classList.remove("show");
+            react.style.visibility = "hidden";
+            hint.style.visibility = "visible";
+        });
+
+        purkinje.addEventListener("mouseenter", () => {
+            purkinjeBox.classList.add("show");
+            react.style.visibility = "visible";
+            hint.style.visibility = "hidden";
+        });
+
+        purkinje.addEventListener("mouseleave", () => {
+            purkinjeBox.classList.remove("show");
+            react.style.visibility = "hidden";
+            hint.style.visibility = "visible";
+        });
+        
+    </script>
+</body>
+</html>

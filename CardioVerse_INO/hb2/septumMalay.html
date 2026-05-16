@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <title>HeartBeat❤❤❤</title>
+
+    <style>
+        body{
+            background-image: linear-gradient(#FF7474,#FDC3C3);
+        }
+        html, body {
+            height: 100%;    
+            margin: 0;         
+            padding: 0;        
+            border: 5px solid #AE383A;
+            box-sizing: border-box; 
+            overflow: hidden;
+        }
+        p{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 90px;
+            display: inline;
+            justify-content: center;
+            align-self: center;
+            text-shadow: 10px 10px 7px #FFB3A7;
+        }
+        #name{
+            position: absolute;
+            transform: translate(95%,75%);
+            color: #441111;
+            text-shadow:
+                -5px -5px #BD0707,
+                 5px -5px #BD0707,
+                -5px  5px #BD0707,
+                 5px  5px #BD0707,
+                 0px -5px #BD0707,
+                 0px  5px #BD0707,
+                -5px  0px #BD0707,
+                 5px  0px #BD0707;
+        }
+        #jantung{
+            width: 1000px;
+            position: absolute;
+            transform: translate(-30%,0%);
+        }
+        #line1{
+            height: 10px;
+            background-color: #AE383A;
+            border: none;
+            position: fixed;  
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        #line2{
+            height: 10px;
+            background-color: #AE383A;
+            border: none;
+            position: fixed;  
+            bottom: 0px;
+            left: -764px;
+            width: 100%;
+            z-index: 1;
+            rotate: 90deg;
+        }
+        #circle{
+            padding: 150px;
+            position: absolute;
+            border: 5px solid #800000;
+            border-radius: 50%;
+            background-color: transparent;
+            transform: translate(53%,129%);
+        }
+        #backBtn{
+            display: inline;
+            font-size: 2.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 23px;
+            border: 5px solid #B10E0E;
+            background-color: #D76A6A;
+            color: #FFFFFF;
+            position: absolute; 
+            left: 75%;
+            top: 83.5%;
+            padding-left: 17px;
+            padding-right: 15px;
+            text-shadow:
+                -4px -4px #990505,
+                 4px -4px #990505,
+                -4px  4px #990505,
+                 4px  4px #990505,
+                 0px -4px #990505,
+                 0px  4px #990505,
+                -4px  0px #990505,
+                 4px  0px #990505;
+        }
+        #title{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 50px;
+            color: #CFEA20;
+            margin-top: 20px;
+            text-shadow: none;
+        }
+        #septum{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 50px;
+            color: #78090B;
+            margin-top: 18px;
+            text-shadow: none;
+        }
+        #titlecontent{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 30px;
+            color: #AB0508;
+            margin-top: -20px;
+            text-shadow: none;
+        }
+        #contentbox{
+            position: absolute;
+            transform: translate(62%,45%);
+            text-align: center;
+            border: 10px solid #E2C8C8;
+            background-color: #FFEFEF;
+            width: fit-content;
+            height: 290px;
+            width: 900px;
+        }
+        #funfactBtn{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 70px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border: 5px solid #B6B81D;
+            background-color: #F2F462;
+            color: #FFFFFF;
+            position: absolute; 
+            transform: translate(477%,475.5%);
+            white-space: nowrap;
+            text-shadow:
+                -3px -3px #F4E6E6,
+                 3px -3px #F4E6E6,
+                -3px  3px #F4E6E6,
+                 3px  3px #F4E6E6,
+                 0px -3px #F4E6E6,
+                 0px  3px #F4E6E6,
+                -3px  0px #F4E6E6,
+                 3px  0px #F4E6E6;
+        }
+        #functionBtn{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 45px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border: 5px solid #B6B81D;
+            background-color: #F2F462;
+            color: #FFFFFF;
+            position: absolute; 
+            transform: translate(467.5%,475.5%);
+            white-space: nowrap;
+            text-shadow:
+                -3px -3px #F4E6E6,
+                 3px -3px #F4E6E6,
+                -3px  3px #F4E6E6,
+                 3px  3px #F4E6E6,
+                 0px -3px #F4E6E6,
+                 0px  3px #F4E6E6,
+                -3px  0px #F4E6E6,
+                 3px  0px #F4E6E6;
+        }
+        #funfactbox{
+            position: absolute;
+            transform: translate(62%,45%);
+            text-align: center;
+            border: 10px solid #E2C8C8;
+            background-color: #FFEFEF;
+            width: fit-content;
+            height: 290px;
+            width: 900px;
+        }
+        #question{
+            font-size: 60px;
+            position: absolute;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            padding-top: 3px;
+            padding-left: 15px;
+            padding-right: 15px;
+            transform: translate(960%,495%);
+        }
+        #questionReal{
+            font-size: 60px;
+            position: absolute;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            padding-top: 3px;
+            padding-left: 15px;
+            padding-right: 15px;
+            transform: translate(1220%,495%);
+        }
+        @keyframes QuestionRealAnim{
+            0%{
+                transform: translate(960%,495%);
+            }
+            100%{
+                transform: translate(1220%,495%);
+            }
+        }
+        .QuestionRealAnim{
+            animation-name: QuestionRealAnim;
+            animation-duration: 600ms;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+        }
+        @keyframes QuestionAnim{
+            0%{
+                transform: translate(1220%,495%);
+            }
+            100%{
+                transform: translate(960%,495%);
+            }
+        }
+        .QuestionAnim{
+            animation-name: QuestionAnim;
+            animation-duration: 600ms;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+        }
+        #questionBox{
+            position: absolute;
+            transform: translate(60.3%,44%);
+            text-align: center;
+            border: 10px solid #E2C8C8;
+            background-color: #FFEFEF;
+            width: fit-content;
+            height: 290px;
+            width: 910px;
+        }
+        #questionLabel{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #6E1B1B;
+            text-align: center;
+            text-shadow: none;
+        }
+        #ans1{
+            font-size: 1.8rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #D38B8B;
+            border: none;
+            width: 909px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: transparent;
+            margin-top: 5px;
+            transition: 500ms;
+        }
+        #ans1New{
+            font-size: 1.8rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #FFFFFF;
+            border: none;
+            width: 909px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: #982020;
+            margin-top: 5px;
+            transition: 500ms;
+        }
+        #ans1Fake{
+            font-size: 1.8rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #FFFFFF;
+            border: none;
+            width: 909px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: #982020;
+            margin-top: 5px;
+        }
+        #ans1:hover{
+            background-color: #EFE2E2;
+        }
+        #ans2{
+            font-size: 1.8rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #D38B8B;
+            border: none;
+            width: 909px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: transparent;
+            margin-top: 3px;
+            transition: 500ms;
+        }
+        #ans2New{
+            font-size: 1.8rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #FFFFFF;
+            border: none;
+            width: 909px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: #6BEA41;
+            margin-top: 3px;
+            transition: 500ms;
+        }
+        #ans2:hover{
+            background-color: #EFE2E2;
+        }
+        #goodjobBtn{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 50px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border: 5px solid #B6B81D;
+            background-color: #F2F462;
+            color: #FFFFFF;
+            position: absolute; 
+            transform: translate(446.5%,475.5%);
+            white-space: nowrap;
+            text-shadow:
+                -3px -3px #F4E6E6,
+                 3px -3px #F4E6E6,
+                -3px  3px #F4E6E6,
+                 3px  3px #F4E6E6,
+                 0px -3px #F4E6E6,
+                 0px  3px #F4E6E6,
+                -3px  0px #F4E6E6,
+                 3px  0px #F4E6E6;
+        }
+        #whyBtn{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 35px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border: 5px solid #B6B81D;
+            background-color: #F2F462;
+            color: #FFFFFF;
+            position: absolute; 
+            transform: translate(452.5%,475.5%);
+            white-space: nowrap;
+            text-shadow:
+                -3px -3px #F4E6E6,
+                 3px -3px #F4E6E6,
+                -3px  3px #F4E6E6,
+                 3px  3px #F4E6E6,
+                 0px -3px #F4E6E6,
+                 0px  3px #F4E6E6,
+                -3px  0px #F4E6E6,
+                 3px  0px #F4E6E6;
+        }
+        #checkBtn{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 50px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 5px solid #B6B81D;
+            background-color: #F2F462;
+            color: #FFFFFF;
+            position: absolute; 
+            transform: translate(447%,490.5%);
+            white-space: nowrap;
+            text-shadow:
+                -3px -3px #F4E6E6,
+                 3px -3px #F4E6E6,
+                -3px  3px #F4E6E6,
+                 3px  3px #F4E6E6,
+                 0px -3px #F4E6E6,
+                 0px  3px #F4E6E6,
+                -3px  0px #F4E6E6,
+                 3px  0px #F4E6E6;
+        }
+        #red{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #D94D4D;
+            text-shadow: none;
+        }
+        #peach{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #D38B8B;
+            text-shadow: none;
+        }
+        #falsebox{
+            position: absolute;
+            transform: translate(60.3%,44%);
+            text-align: center;
+            border: 10px solid #E2C8C8;
+            background-color: #FFEFEF;
+            width: fit-content;
+            height: 290px;
+            width: 910px;
+        }
+    </style>
+</head>
+<body>
+    <p id="name">SEPTUM</p>
+    <img id="jantung" src="jantungexplorer.png" alt="jantung">
+    <button id="circle"></button>
+    <hr id="line1">
+    <hr id="line2">
+    
+    <a href="anatomy_explorerMalay.html">
+    <button id="backBtn">KEMBALI</button>
+    </a>
+
+    <div id="contentbox">
+        <br>
+        <p id="title">APA ITU </p><p id="septum">SEPTUM?</p><br><br>
+        <p id="titlecontent">Memisahkan bahagian<br>jantung dan menghalang<br>darah beroksigen<br>daripada bercampur dengan<br>darah terdeoksigen.</p>
+    </div>
+    
+    <button id="funfactBtn">INFO</button>
+    <button id="functionBtn">FUNGSI</button>
+    <button id="question">❓</button>
+    <button id="questionReal">❓</button>
+
+    <div id="funfactbox">
+        <br>
+        <p id="title">FAKTA MENARIK<br>TENTANG </p><p id="septum">SEPTUM!</p><br><br>
+        <p id="titlecontent">Septum boleh tumbuh semula selepas cedera dengan<br>bantuan sel stemnya sendiri.</p>
+    </div>
+
+    <div id="questionBox">
+        <br>
+        <p id="questionLabel">Apakah fungsi<br>septum?</p><br>
+        <button id="ans2">A) Menghalang percampuran<br>darah beroksigen dan<br>terdeoksigen</button>
+        <br>
+        <button id="ans1">B) Mencampurkan kedua-<br>dua bahagian jantung</button>
+        <br>
+    </div>
+
+    <button id="goodjobBtn">BAGUS!</button>
+    <button id="whyBtn">KENAPA?</button>
+    <button id="checkBtn">CUBA<br>SEMULA</button>
+
+    <div id="falsebox">
+        <br>
+        <p id="questionLabel">Mengapa salah?</p><br>
+        <button id="ans1Fake">B) Mencampurkan kedua-<br>dua bahagian jantung</button>
+        <br><br>
+        <p id="peach">Septum memisahkan bahagian jantung, jadi darah<br>percampuran tidak berlaku!</p>
+    </div>
+
+
+
+    <script>
+        const funfactBtn = document.getElementById("funfactBtn");
+        const functionBtn = document.getElementById("functionBtn");
+        const contentbox = document.getElementById("contentbox");
+        const funfactbox = document.getElementById("funfactbox");
+
+        const question = document.getElementById("question");
+        const questionReal = document.getElementById("questionReal");
+        const questionbox = document.getElementById("questionBox");
+
+        const answer1 = document.getElementById("ans1");
+        const answer2 = document.getElementById("ans2");
+
+        const goodjobBtn = document.getElementById("goodjobBtn");
+        const whyBtn = document.getElementById("whyBtn");
+        const falsebox = document.getElementById("falsebox");
+        const checkBtn = document.getElementById("checkBtn");
+        
+
+        functionBtn.style.visibility = "hidden";
+        funfactbox.style.visibility = "hidden";
+        questionbox.style.visibility = "hidden";
+        questionReal.style.visibility = "hidden";
+        goodjobBtn.style.visibility = "hidden";
+        whyBtn.style.visibility = "hidden";
+        falsebox.style.visibility = "hidden";
+        checkBtn.style.visibility = "hidden";
+        
+        funfactBtn.onclick = function(){
+            funfactBtn.style.visibility = "hidden";
+            functionBtn.style.visibility = "visible";
+
+            funfactbox.style.visibility = "visible";
+            contentbox.style.visibility = "hidden";
+        }
+
+        functionBtn.onclick = function(){
+            functionBtn.style.visibility = "hidden";
+            funfactBtn.style.visibility = "visible";
+
+            contentbox.style.visibility = "visible";
+            funfactbox.style.visibility = "hidden";
+        }
+
+        question.onclick = function(){
+            answer1.style.transition = "500ms";
+            answer2.style.transition = "500ms";
+
+            question.style.visibility = "hidden";
+            questionReal.style.visibility = "visible";
+            questionReal.classList.remove("QuestionRealAnim");
+            void question.offsetWidth;       
+            questionReal.classList.add("QuestionRealAnim");
+
+            functionBtn.style.visibility = "hidden";
+            funfactBtn.style.visibility = "hidden";
+            contentbox.style.visibility = "hidden";
+            funfactbox.style.visibility = "hidden";
+
+            questionbox.style.visibility = "visible";
+        }
+
+        questionReal.addEventListener("animationend", () => {
+        questionReal.classList.remove("QuestionRealAnim");
+        });
+
+        questionReal.onclick = function(){
+            answer1.style.transition = "0ms";
+            answer2.style.transition = "0ms";
+
+            question.style.visibility = "visible";
+            questionReal.style.visibility = "hidden";
+
+            question.classList.remove("QuestionAnim");
+            void question.offsetWidth;       
+            question.classList.add("QuestionAnim");
+
+            functionBtn.style.visibility = "hidden";
+            funfactBtn.style.visibility = "visible";
+            contentbox.style.visibility = "visible";
+            funfactbox.style.visibility = "hidden";
+
+            questionbox.style.visibility = "hidden";
+        }
+
+        question.addEventListener("animationend", () => {
+        question.classList.remove("QuestionAnim");
+        });
+
+        answer1.onclick = function(){
+            answer1.id = "ans1New";
+            answer2.style.pointerEvents = "none";
+            question.style.pointerEvents = "none";
+
+            whyBtn.style.visibility = "visible";
+
+            question.style.visibility = "visible";
+            questionReal.style.visibility = "hidden";
+
+            question.classList.remove("QuestionAnim");
+            void question.offsetWidth;       
+            question.classList.add("QuestionAnim");
+        }
+
+        answer2.onclick = function(){
+            answer2.id = "ans2New";
+            answer1.style.pointerEvents = "none";
+            question.style.pointerEvents = "none";
+
+            goodjobBtn.style.visibility = "visible";
+
+            question.style.visibility = "visible";
+            questionReal.style.visibility = "hidden";
+
+            question.classList.remove("QuestionAnim");
+            void question.offsetWidth;       
+            question.classList.add("QuestionAnim");
+        }
+
+        goodjobBtn.onclick = function(){
+            answer1.id = "ans1";
+            answer2.id = "ans2";
+
+            answer1.style.transition = "0ms";
+            answer2.style.transition = "0ms";
+
+            questionbox.style.visibility = "hidden";
+            goodjobBtn.style.visibility = "hidden";
+
+            answer1.style.pointerEvents = "auto";
+            answer2.style.pointerEvents = "auto";
+            question.style.pointerEvents = "auto";
+
+            functionBtn.style.visibility = "hidden";
+            funfactBtn.style.visibility = "visible";
+            contentbox.style.visibility = "visible";
+            funfactbox.style.visibility = "hidden";
+        }
+
+        whyBtn.onclick = function(){
+            whyBtn.style.visibility = "hidden";
+
+            questionbox.style.visibility = "hidden";
+            falsebox.style.visibility = "visible";
+            checkBtn.style.visibility = "visible";
+        }
+
+        checkBtn.onclick = function(){
+            answer1.id = "ans1";
+            answer2.id = "ans2";
+
+            answer1.style.transition = "0ms";
+            answer2.style.transition = "0ms";
+
+            falsebox.style.visibility = "hidden";
+            checkBtn.style.visibility = "hidden";
+
+            answer1.style.pointerEvents = "auto";
+            answer2.style.pointerEvents = "auto";
+            question.style.pointerEvents = "auto";
+
+            functionBtn.style.visibility = "hidden";
+            funfactBtn.style.visibility = "visible";
+            contentbox.style.visibility = "visible";
+            funfactbox.style.visibility = "hidden";
+        }
+
+    </script>
+</body>
+</html>

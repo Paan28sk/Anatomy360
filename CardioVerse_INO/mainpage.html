@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CardioVerse — Anatomy 360</title>
+  <link rel="stylesheet" href="src/style.css" />
+  <style>
+    /* ── Brain page overrides (dark 3D environment) ── */
+    body {
+      overflow: hidden;
+      display: block;
+      place-items: unset;
+      background: var(--bg-deep);
+    }
+
+    canvas { display: block; }
+
+    /* ── Synapse particle canvas (sits at z-index 0, behind 3D) ── */
+    #synapse-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Ambient lavender glow ── */
+    .ambient-glow {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 55% 45% at 50% 55%, rgba(135,133,162,0.10) 0%, transparent 70%),
+        radial-gradient(ellipse 35% 30% at 25% 25%, rgba(135,133,162,0.07) 0%, transparent 60%);
+    }
+
+    /* ── Subtle scan lines ── */
+    .scan-overlay {
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(135,133,162,0.012) 3px,
+        rgba(135,133,162,0.012) 4px
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Neural activity indicator (top-right) ── */
+    .neural-tag {
+      position: fixed;
+      top: 64px; right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--lavender);
+      z-index: 1100;
+      opacity: 0.75;
+    }
+
+    .neural-tag .blink {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--lavender);
+      box-shadow: 0 0 8px var(--lavender);
+      animation: blink-node 1.4s ease-in-out infinite;
+    }
+
+    @keyframes blink-node {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.2; }
+    }
+
+    /* ── Brain accent overrides ── */
+    #langButtons button.active {
+      background: rgba(135,133,162,0.18);
+      color: var(--lavender);
+      border-color: rgba(135,133,162,0.45);
+    }
+
+    .heart-label {
+      border-color: rgba(135,133,162,0.35);
+    }
+
+    .heart-label:hover {
+      border-color: var(--lavender);
+      background: rgba(135,133,162,0.14);
+      box-shadow: 0 0 14px rgba(135,133,162,0.28);
+    }
+
+    #infoPopup button {
+      background: linear-gradient(135deg, var(--lavender), #a3a1c0);
+    }
+
+    #checkpointTitle { color: var(--lavender); }
+  </style>
+</head>
+<body>
+
+  <!-- Synapse particle canvas (z-index 0) -->
+  <canvas id="synapse-bg"></canvas>
+
+  <!-- Ambient layers (z-index 0) -->
+  <div class="ambient-glow"></div>
+  <div class="scan-overlay"></div>
+
+  <!-- NAV (z-index 1000) -->
+  <nav class="page-header">
+    <span class="logo-dot" style="background:var(--lavender); box-shadow:0 0 10px var(--lavender);"></span>
+    <strong>Anatomy 360</strong>
+    <a class="back-link" href="index.html">← Back to Home Page</a>
+  </nav>
+
+  <!-- Neural activity indicator -->
+  <div class="neural-tag">
+    <span class="blink"></span>
+    Neural Scan Active
+  </div>
+
+  <!-- Checkpoint overlay (bottom-left, z-index 1100) -->
+  <div id="textOverlay">
+    <div id="checkpointTitle"></div>
+    <div id="checkpointDesc"></div>
+  </div>
+
+  <!-- Language toggle -->
+  <div id="langButtons">
+    <button id="lang-en" class="active" aria-label="English">EN</button>
+    <button id="lang-ms" aria-label="Malay">BM</button>
+  </div>
+
+  <!-- 3D canvas container (z-index 1, fills viewport) -->
+  <div id="container">
+    <div id="canvasContainer"></div>
+    <div id="checkpointInfo"    style="display:none;"></div>
+    <div id="checkpointButtons" style="display:none;">
+      <button id="prevCheckpoint">Previous</button>
+      <button id="nextCheckpoint">Next</button>
+    </div>
+    
+    <!-- Redirect buttons for Heart checkpoint -->
+    <div id="heartRedirectBtn" style="display:none; position:fixed; bottom:80px; left:20px; z-index:1100;">
+      <button onclick="window.location.href='mainheart.html'" style="padding:10px 20px; background:#e91e63; color:white; border:none; border-radius:5px; cursor:pointer; font-family:inherit; font-size:1rem;">
+        Explore Heart
+      </button>
+      <button onclick="window.location.href='hb2/main_page.html'" style="padding:10px 20px; background:var(--lavender); color:white; border:none; border-radius:5px; cursor:pointer; font-family:inherit; font-size:1rem; margin-left:10px;">
+        Learn More
+      </button>
+    </div>
+    
+    <!-- Redirect buttons for Brain checkpoint -->
+    <div id="brainRedirectBtn" style="display:none; position:fixed; bottom:80px; left:20px; z-index:1100;">
+      <button onclick="window.location.href='mainbrain.html'" style="padding:10px 20px; background:var(--lavender); color:white; border:none; border-radius:5px; cursor:pointer; font-family:inherit; font-size:1rem;">
+        Explore Brain
+      </button>
+      <button onclick="window.location.href='/hb2/main_page.html'" style="padding:10px 20px; background:var(--lavender); color:white; border:none; border-radius:5px; cursor:pointer; font-family:inherit; font-size:1rem; margin-left:10px;">
+        Learn More
+      </button>
+    </div>
+    
+    <script type="module" src="/src/tries.js"></script>
+
+    <!-- Info popup -->
+    <div id="infoPopup">
+      <h2 id="popupTitle">Title</h2>
+      <p  id="popupText">Explanation text goes here.</p>
+      <button onclick="document.getElementById('infoPopup').style.display='none'">Close</button>
+    </div>
+
+    <div id="fadeOverlay" style="
+        position: fixed; inset: 0;
+        background: #050a12;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 9999;
+    "></div>
+  </div>
+
+  <!-- Synapse network particle script -->
+  <script>
+    const cv  = document.getElementById('synapse-bg');
+    const ctx = cv.getContext('2d');
+    let W, H, nodes = [];
+
+    function resize() {
+      W = cv.width  = window.innerWidth;
+      H = cv.height = window.innerHeight;
+    }
+
+    function initNodes() {
+      nodes = Array.from({ length: 38 }, () => ({
+        x:  Math.random() * W,
+        y:  Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.18,
+        vy: (Math.random() - 0.5) * 0.18,
+        r:  Math.random() * 1.8 + 0.5,
+        a:  Math.random() * 0.5 + 0.1,
+        pulse: Math.random() * Math.PI * 2,
+      }));
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+
+      nodes.forEach(n => {
+        n.x += n.vx; n.y += n.vy;
+        if (n.x < 0) n.x = W; if (n.x > W) n.x = 0;
+        if (n.y < 0) n.y = H; if (n.y > H) n.y = 0;
+        n.pulse += 0.04;
+
+        const glow = 0.5 + 0.5 * Math.sin(n.pulse);
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r * (1 + 0.3 * glow), 0, Math.PI * 2);
+        /* Palette lavender #8785A2 nodes */
+        ctx.fillStyle = `rgba(135,133,162,${n.a * glow})`;
+        ctx.fill();
+      });
+
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const d  = Math.sqrt(dx * dx + dy * dy);
+          if (d < 130) {
+            const alpha = 0.075 * (1 - d / 130);
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.strokeStyle = `rgba(135,133,162,${alpha})`;
+            ctx.lineWidth = 0.6;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(draw);
+    }
+
+    window.addEventListener('resize', () => { resize(); initNodes(); });
+    resize(); initNodes(); draw();
+  </script>
+
+  
+</body>
+</html>

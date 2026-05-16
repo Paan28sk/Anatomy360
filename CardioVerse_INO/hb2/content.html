@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    
+    <title>HeartBeat❤❤❤</title>
+
+    <style>
+        body{
+            background-image: url(bgpixel.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        html, body {
+            height: 100%;    
+            margin: 0;         
+            padding: 0;        
+            border: 5px solid #CAB094;
+            box-sizing: border-box; 
+            overflow: hidden;
+        }
+        p{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 60px;
+            display: inline;
+            justify-content: center;
+            align-self: center;
+            text-shadow: 10px 10px 7px #FFB3A7;
+        }
+        #p1{
+            color: #D94A4A;
+            text-shadow:
+                -5px -5px #790808,
+                 5px -5px #790808,
+                -5px  5px #790808,
+                 5px  5px #790808,
+                 0px -5px #790808,
+                 0px  5px #790808,
+                -5px  0px #790808,
+                 5px  0px #790808;
+        }
+        #p1box{
+            text-align: center;
+            margin-top: 18px;
+        }
+        #p2{
+            color: #A12C2C;
+            text-shadow:
+                -5px -5px #790808,
+                 5px -5px #790808,
+                -5px  5px #790808,
+                 5px  5px #790808,
+                 0px -5px #790808,
+                 0px  5px #790808,
+                -5px  0px #790808,
+                 5px  0px #790808;
+            font-size: 63px;
+        }
+        #p2box{
+            position: absolute;
+            transform: translate(80%,-97%);
+            z-index: -1;
+        }
+        #p3box{
+            position: absolute;
+            transform: translate(488.2%,-97%);
+            z-index: -1;
+        }
+        #p4box{
+            position: absolute;
+            transform: translate(163.2%,-98%);
+            z-index: -1;
+        }
+        #mainBox{
+            display: flex;
+            text-align: center;
+            width: 100%;
+            justify-content: space-evenly;
+            position: absolute;
+            top: 20%;
+        }
+        #cp1{
+            border: 6px solid #CAB094;
+            width: 350px;
+            height: fit-content;
+            background-color: #F4ECD8;
+            padding: 10px;
+            margin-top: 5px;
+            box-shadow: 10px 5px 20px #00000040;
+        }
+        #ins1{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 14px;
+            display: inline;
+            justify-content: center;
+            align-self: center;
+            text-shadow: none;
+            color: #961919;
+            text-shadow:
+                -1.6px -1.6px #E58F8F,
+                 1.6px -1.6px #E58F8F,
+                -1.6px  1.6px #E58F8F,
+                 1.6px  1.6px #E58F8F,
+                 0px -1.6px #E58F8F,
+                 0px  1.6px #E58F8F,
+                -1.6px  0px #E58F8F,
+                 1.6px  0px #E58F8F;
+        }
+        #cp1star{
+            width: 330px;
+            position: absolute;
+            transform: translate(-49%,-50%);
+        }
+        #cp2{
+            border: 6px solid #CAB094;
+            width: 350px;
+            height: 524px;
+            background-color: #F4ECD8;
+            padding: 10px;
+            margin-top: 5px;
+            box-shadow: 10px 5px 20px #00000040;
+        }
+        #cp2star{
+            width: 330px;
+            position: absolute;
+            transform: translate(-52%,-15%);
+        }
+        #cp3{
+            border: 6px solid #CAB094;
+            width: 350px;
+            height: 524px;
+            background-color: #F4ECD8;
+            padding: 10px;
+            margin-top: 5px;
+            box-shadow: 10px 5px 20px #00000040;
+        }
+        #cp3star{
+            width: 330px;
+            position: absolute;
+            transform: translate(-51%,-15%);
+        }
+        #title{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 35px;
+            display: inline;
+            justify-content: center;
+            align-self: center;
+            text-shadow: none;
+            color: #4F4F4F;
+            text-shadow:
+                -1px -1px #000000,
+                 1px -1px #000000,
+                -1px  1px #000000,
+                 1px  1px #000000,
+                 0px -1px #000000,
+                 0px  1px #000000,
+                -1px  0px #000000,
+                 1px  0px #000000;
+        }
+        #cpNum{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 30px;
+            display: inline;
+            justify-content: center;
+            align-self: center;
+            text-shadow: none;
+            letter-spacing: 4px;
+            color: #AF0707;
+            text-shadow:
+                -3px -3px #610707,
+                 3px -3px #610707,
+                -3px  3px #610707,
+                 3px  3px #610707,
+                 0px -3px #610707,
+                 0px  3px #610707,
+                -3px  0px #610707,
+                 3px  0px #610707;
+        }
+        #pixelheart{
+            width: 170px;
+        }
+        #drum{
+            width: 188px;
+            position: relative;
+            transform: translate(-8%,-9%);
+        }
+        #trofi{
+            width: 178px;
+            position: relative;
+        }
+        #clickBtn1{
+            display: inline;
+            font-size: 1rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 200;
+            font-style: normal;
+            padding: 15px;
+            border: 5px solid #832121;
+            background-color: #AC3636;
+            color: #FFFFFF;
+            padding-left: 18px;
+            padding-right: 18px;
+            position: absolute;
+            transform: translate(-101%,-120%);
+            letter-spacing: 2px;
+            transition: 400ms;
+        }
+        #clickBtn1:hover{
+            font-size: 1.3rem;
+            transform: translate(-100%,-120%);
+            margin-left: 37px;
+            background-color: #EF8585;
+            border: 5px solid #D64646;
+            text-shadow:
+                -1px -1px #000000,
+                 1px -1px #000000,
+                -1px  1px #000000,
+                 1px  1px #000000,
+                 0px -1px #000000,
+                 0px  1px #000000,
+                -1px  0px #000000,
+                 1px  0px #000000;
+        }
+        #plaster1{
+            position: absolute;
+            width: 200px;
+            transform: translate(28%,-300%);
+        }
+        #plaster2{
+            position: absolute;
+            width: 200px;
+            transform: translate(28%,-294%);
+        }
+        #plaster3{
+            position: absolute;
+            width: 200px;
+            transform: translate(28%,-293%);
+        }
+    </style>
+</head>
+<body>
+    <div id="p1box">
+    <p id="p1">TABLE OF CONTENTS</p>
+    </div>
+    <div id="p2box">
+    <p id="p2">TABLE</p>
+    </div>
+    <div id="p3box">
+    <p id="p2">OF</p>
+    </div>
+    <div id="p4box">
+    <p id="p2" style="font-size: 61px;">CONTENTS</p>
+    </div>
+
+    <div id="mainBox">
+        <div id="cp1">
+            <a href="anatomy_explorer.html">
+            <button id="clickBtn1">CLICK ME</button>
+            </a>
+            <br>
+            <p id="title">ANATOMY<br>EXPLORER<br></p>
+            <p id="ins1">Travel through the heart!<br>Discover each part’s job<br>with fun facts & mini<br>challenges.<br></p>
+            <br>
+            <img id="pixelheart" src="pixelheart.png" alt="pixelheart">
+
+            <br><br>
+            <p id="cpNum">CHECKPOINT<br>1<br></p>
+            <br>
+            <img id="cp1star" src="cp1star.png" alt="star">
+            <br>
+            <img id="plaster1" src="plaster.png" alt="plaster">
+        </div>
+
+        <div id="cp2">
+            <a href="conductthebeat.html">
+            <button id="clickBtn1">CLICK ME</button>
+            </a>
+            <br>
+            <p id="title">CONDUCT<br>THE BEAT!</p><br><br>
+            <p id="ins1">Tap through the<br>heartbeat steps!<br>Race the clock in a fast-<br>paced memory quiz.<br></p>
+            <br>
+            <img id="drum" src="drum.png" alt="drum">
+            
+            <p id="cpNum">CHECKPOINT 2</p>
+            <br>
+            <img id="cp2star" src="cp2star.png" alt="star">
+            <br><br>
+            <img id="plaster2" src="plaster.png" alt="plaster">
+        </div>
+
+        <div id="cp3">
+            <a href="finalpulse_home.html">
+            <button id="clickBtn1">CLICK ME</button>
+            </a>
+            <br>
+            <p id="title">FINAL<br>PULSE!</p><br><br>
+            <p id="ins1">Ready for the final<br>challenge? Show what<br>you’ve learned in a fun<br>quiz!<br></p>
+            <br>
+            <img id="trofi" src="trofi.png" alt="trofi">
+
+            <br><br>
+            <p id="cpNum">CHECKPOINT 3</p>
+            <br>
+            <img id="cp3star" src="cp3star.png" alt="star">
+            <br><br>
+            <img id="plaster3" src="plaster.png" alt="plaster">
+        </div>
+    </div>
+</body>
+</html>

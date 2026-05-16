@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <title>HeartBeat❤❤❤</title>
+
+    <style>
+        body{
+            background-image: linear-gradient(#C63A3A,#ECC3C3);
+        }
+        html, body {
+            height: 100%;    
+            margin: 0;         
+            padding: 0;        
+            border: 5px solid #591717;
+            box-sizing: border-box; 
+            overflow: hidden;
+        }
+        #aorta{
+            width: 1100px;
+            position: absolute;
+            transform: translate(20%,20%);
+            z-index: -2;
+        }
+        #line{
+            height: 10px;
+            background-color: #591717;
+            border: none;
+            position: fixed;   /* always sticks to the viewport bottom */
+            bottom: -12px;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        #title{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 42px;
+            color: #CFEA20;
+            margin-top: 18px;
+        }
+        #titlecontent{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            color: #6E1B1B;
+            margin-top: -20px;
+        }
+        #contentbox{
+            position: absolute;
+            transform: translate(4%,7%);
+            text-align: center;
+            border: 10px solid #E2C8C8;
+            background-color: #FFEFEF;
+            width: fit-content;
+            height: 220px;
+            padding-left: 10.2rem;
+            padding-right: 10.2rem;
+        }
+        #funfactBox{
+            position: absolute;
+            transform: translate(4%,7%);
+            text-align: center;
+            border: 10px solid #E2C8C8;
+            background-color: #FFEFEF;
+            width: fit-content;
+            height: 220px;
+            padding-left: 191px;
+            padding-right: 191px;
+        }
+        #circle{
+            padding: 110px;
+            padding-left: 130px;
+            padding-right: 130px;
+            padding-top: 10px;
+            position: absolute;
+            border: 5px solid #582BB0;
+            border-radius: 50%;
+            background-color: transparent;
+            transform: translate(235%,270%);
+        }
+        #a{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 75px;
+            position: absolute;
+            rotate: -20deg;
+            transform: translate(470%,425%);
+            color: #591717;
+        }
+        #o{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 75px;
+            position: absolute;
+            rotate: -10deg;
+            transform: translate(650%,325%);
+            color: #591717;
+        }
+        #r{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 75px;
+            position: absolute;
+            transform: translate(810%,198%);
+            color: #591717;
+        }
+        #t{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 75px;
+            position: absolute;
+            rotate: 10deg;
+            transform: translate(925%,50%);
+            color: #591717;
+        }
+        #a2{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 75px;
+            position: absolute;
+            rotate: 20deg;
+            transform: translate(1020%,-120%);
+            color: #591717;
+        }
+        #funfactBtn{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 30px;
+            border: 5px solid #B6B81D;
+            background-color: #F2F462;
+            color: #FFFFFF;
+            position: absolute; 
+            transform: translate(411%,290%);
+            white-space: nowrap;
+            text-shadow:
+                -3px -3px #F4E6E6,
+                 3px -3px #F4E6E6,
+                -3px  3px #F4E6E6,
+                 3px  3px #F4E6E6,
+                 0px -3px #F4E6E6,
+                 0px  3px #F4E6E6,
+                -3px  0px #F4E6E6,
+                 3px  0px #F4E6E6;
+        }
+        #functionBtn{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 30px;
+            border: 5px solid #B6B81D;
+            background-color: #F2F462;
+            color: #FFFFFF;
+            position: absolute; 
+            transform: translate(411%,290%);
+            white-space: nowrap;
+            text-shadow:
+                -3px -3px #F4E6E6,
+                 3px -3px #F4E6E6,
+                -3px  3px #F4E6E6,
+                 3px  3px #F4E6E6,
+                 0px -3px #F4E6E6,
+                 0px  3px #F4E6E6,
+                -3px  0px #F4E6E6,
+                 3px  0px #F4E6E6;
+        }
+        #question{
+            font-size: 18px;
+            position: absolute;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            padding-top: 3px;
+            padding-left: 15px;
+            padding-right: 15px;
+            transform: translate(60%,300%);
+            transition: 600ms;
+        }
+        #questionBox{
+            position: absolute;
+            transform: translate(8%,80%);
+            background-color: #FFFFFF;
+            border: 10px solid #EFE2E2;
+            border-radius: 30px;
+        }
+        #wrongBox{
+            position: absolute;
+            transform: translate(8%,80%);
+            background-color: #FFFFFF;
+            border: 10px solid #EFE2E2;
+            border-radius: 30px;
+            margin-top: 9px;
+            /*animation-name: popUp;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+            animation-play-state: paused;*/
+        }
+        @keyframes popUp{
+            0%{
+                transform: translate(8%,77%);
+                padding-bottom: 20px;
+            }
+            100%{
+                transform: translate(8%,80%);
+                padding-bottom: -200px;
+            }
+        }
+        #questionBoxClose{
+            position: absolute;
+            transform: translate(8%,80%);
+            background-color: #FFFFFF;
+            border: 10px solid #EFE2E2;
+            border-radius: 30px;
+        }
+        #questionLabel{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #6E1B1B;
+            text-align: center;
+        }
+        #ans1{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #D38B8B;
+            border: none;
+            width: 695px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: transparent;
+        }
+        #ans1Disabled{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #D38B8B;
+            border: none;
+            width: 695px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: transparent;
+        }
+        #ans1:hover{
+            background-color: #EFE2E2;
+        }
+        #ans1New{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            border: none;
+            width: 695px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #982020;
+            color: #FFFDFD;
+        }
+        #ans1Anim{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            border: none;
+            width: 695px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #982020;
+            color: #FFFDFD;
+            transition: 600ms;
+        }
+        #ans2{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #D38B8B;
+            width: 695px;
+            border: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 2px;
+            background-color: transparent;
+        }
+        #wrongExplainLabel{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #6E1B1B;
+            border: none;
+            width: 695px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 12px;
+            background-color: transparent;
+        }
+        #textVena{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #D38B8B;
+            background-color: transparent;
+            margin-top: -2px;
+            position: relative;
+        }
+        #ans2Disabled{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #D38B8B;
+            border: none;
+            width: 695px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 2px;
+            background-color: transparent;
+        }
+        #ans2:hover{
+            background-color: #EFE2E2;
+        }
+        #ans2New{
+            font-size: 1.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #FFFFFF;
+            background-color: #6BEA41;
+            width: 695px;
+            border: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 2px;
+            transition: 600ms;
+        }
+        #goodjobBtn{
+            font-size: 1.5rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 10px;
+            padding-left: 5px;
+            padding-right: 0px;
+            border: 5px solid #9B9E0D;
+            background-color: #F3F718;
+            color: #FFFFFF;
+            position: absolute; 
+            transform: translate(266%,1200%);
+            white-space: nowrap;
+            text-shadow:
+                -1px -1px #220101,
+                 1px -1px #220101,
+                -1px  1px #220101,
+                 1px  1px #220101,
+                 0px -1px #220101,
+                 0px  1px #220101,
+                -1px  0px #220101,
+                 1px  0px #220101;
+        }
+        #whyBtn{
+            font-size: 1.5rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 15px;
+            padding-left: 25px;
+            padding-right: 20px;
+            border: 5px solid #9B9E0D;
+            background-color: #F3F718;
+            color: #FFFFFF;
+            z-index: 2;
+            position: absolute; 
+            transform: translate(440%,1010%);
+            white-space: nowrap;
+            text-shadow:
+                -1px -1px #220101,
+                 1px -1px #220101,
+                -1px  1px #220101,
+                 1px  1px #220101,
+                 0px -1px #220101,
+                 0px  1px #220101,
+                -1px  0px #220101,
+                 1px  0px #220101;
+        }
+        #checkBtn{
+            font-size: 1.5rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 15px;
+            border: 5px solid #9B9E0D;
+            background-color: #F3F718;
+            color: #FFFFFF;
+            z-index: 2;
+            position: absolute; 
+            transform: translate(250%,800%);
+            white-space: nowrap;
+            text-shadow:
+                -1px -1px #220101,
+                 1px -1px #220101,
+                -1px  1px #220101,
+                 1px  1px #220101,
+                 0px -1px #220101,
+                 0px  1px #220101,
+                -1px  0px #220101,
+                 1px  0px #220101;
+        }
+        #backBtn{
+            display: inline;
+            font-size: 2.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 23px;
+            border: 5px solid #B10E0E;
+            background-color: #D76A6A;
+            color: #FFFFFF;
+            position: absolute; 
+            left: 1.5%;
+            top: 83.5%;
+            padding-left: 17px;
+            padding-right: 15px;
+            text-shadow:
+                -4px -4px #990505,
+                 4px -4px #990505,
+                -4px  4px #990505,
+                 4px  4px #990505,
+                 0px -4px #990505,
+                 0px  4px #990505,
+                -4px  0px #990505,
+                 4px  0px #990505;
+        }
+        #backBtn2{
+            display: inline;
+            font-size: 2.7rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 23px;
+            border: 5px solid #B10E0E;
+            background-color: #D76A6A;
+            color: #FFFFFF;
+            position: absolute; 
+            left: 84.5%;
+            top: 83.5%;
+            padding-left: 17px;
+            padding-right: 15px;
+            text-shadow:
+                -4px -4px #990505,
+                 4px -4px #990505,
+                -4px  4px #990505,
+                 4px  4px #990505,
+                 0px -4px #990505,
+                 0px  4px #990505,
+                -4px  0px #990505,
+                 4px  0px #990505;
+        }
+        .popUpAnim {
+            animation-name: popUp;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+        }
+    </style>
+</head>
+<body>
+    <img id="aorta" src="aorta.png" alt="aorta">
+    <hr id="line">
+
+    <div id="contentbox">
+        <p id="title">WHAT IS AORTA?</p>
+        <p id="titlecontent">Main artery that transports<br>oxygenated blood to the whole<br>body.</p>
+    </div>
+
+    <div id="funfactBox">
+        <p id="title">DID YOU KNOW?</p>
+        <p id="titlecontent">An adult’s aorta is so big,<br>it’s about the diameter of a<br>garden hose ; 2.5 to 3 cm wide!</p>
+    </div>
+
+    <p id="circle"></p>
+    <p id="a">A</p>
+    <p id="o">O</p>
+    <p id="r">R</p>
+    <p id="t">T</p>
+    <p id="a2">A</p>
+
+    <button id="funfactBtn">FUN FACT</button>
+    <button id="functionBtn">FUNCTION</button>
+    <button id="question">❓</button>
+    <div id="questionBox">
+        <p id="questionLabel">Which of the following<br>are the functions<br>of aorta?</p>
+        <button id="ans1">A) Transport deoxygenated<br>blood from the<br>heart.</button>
+        <br>
+        <button id="ans2">B) Transport oxygenated<br>blood to the<br>body.</button>
+        <br><br>
+    </div>
+
+    <button id="goodjobBtn">GOOD JOB!</button>
+    <button id="whyBtn">WHY?</button>
+    <button id="checkBtn">CHECK IT<br>AGAIN</button>
+
+    <a href="anatomy_explorer.html">
+    <button id="backBtn">BACK</button>
+    </a>
+
+    <button id="backBtn2">BACK</button>
+
+    <div id="wrongBox">
+        <p id="questionLabel">Why is it<br>wrong?</p>
+        <button id="ans1New">A) Transport deoxygenated<br>blood from the<br>heart.</button>
+        <br>
+        <button id="wrongExplainLabel">This is the<br>function of<p id="textVena">vena cava!</p></button>
+    </div>
+
+
+
+
+
+    <script>
+        const funfactBtn = document.getElementById("funfactBtn");
+        const functionBtn = document.getElementById("functionBtn");
+
+        const contentbox = document.getElementById("contentbox");
+        const funfactBox = document.getElementById("funfactBox");
+
+        const backBtn = document.getElementById("backBtn");
+        const backBtn2 = document.getElementById("backBtn2");
+
+        backBtn2.style.visibility = "hidden";
+        functionBtn.style.visibility = "hidden";
+        funfactBox.style.visibility = "hidden";
+
+        funfactBtn.onclick = function(){
+            funfactBtn.style.visibility = "hidden";
+            functionBtn.style.visibility = "visible";
+
+            funfactBox.style.visibility = "visible";
+            contentbox.style.visibility = "hidden";
+        }
+
+        functionBtn.onclick = function(){
+            functionBtn.style.visibility = "hidden";
+            funfactBtn.style.visibility = "visible";
+
+            contentbox.style.visibility = "visible";
+            funfactBox.style.visibility = "hidden";
+        }
+
+
+        const answer1 = document.getElementById("ans1");
+        const answer2 = document.getElementById("ans2");
+        const goodjobBtn = document.getElementById("goodjobBtn");
+        const whyBtn = document.getElementById("whyBtn");
+
+        const question = document.getElementById("question");
+        const questionBox = document.getElementById("questionBox");
+        const wrongBox = document.getElementById("wrongBox");
+
+        questionBox.style.visibility = "hidden";
+        wrongBox.style.visibility = "hidden";
+
+        question.onclick = function(){
+            answer1.id = "ans1";
+            answer2.id = "ans2";
+
+            questionBox.style.visibility = "visible";
+            functionBtn.style.visibility = "hidden";
+            funfactBtn.style.visibility = "hidden";
+
+            funfactBox.style.visibility = "visible";
+            contentbox.style.visibility = "hidden";
+            backBtn.style.visibility = "hidden";
+
+            backBtn2.style.visibility = "visible";
+        }
+
+        goodjobBtn.style.visibility = "hidden";
+        whyBtn.style.visibility = "hidden";
+
+        answer1.onclick = function(){
+            answer1.id = "ans1Anim";
+            whyBtn.style.visibility = "visible";
+            answer2.disabled = true;
+            answer2.id = "ans2Disabled";
+        }
+
+        answer2.onclick = function(){
+            answer2.id = "ans2New";
+            goodjobBtn.style.visibility = "visible";
+            answer1.disabled = true;
+            answer1.id = "ans1Disabled";
+        }
+
+        goodjobBtn.onclick = function(){
+            questionBox.id = "questionBoxClose";
+
+            questionBox.style.visibility = "hidden";
+            functionBtn.style.visibility = "hidden";
+            funfactBtn.style.visibility = "visible";
+
+            funfactBox.style.visibility = "hidden";
+            contentbox.style.visibility = "visible";
+            backBtn.style.visibility = "visible";
+
+            backBtn2.style.visibility = "hidden";
+
+            answer2.id = "ans2";
+            goodjobBtn.style.visibility = "hidden";
+            answer1.disabled = false;
+            answer1.id = "ans1";
+        }
+
+        const questionLabel = document.getElementById("questionLabel");
+        const checkBtn = document.getElementById("checkBtn");
+
+        
+
+        checkBtn.style.visibility = "hidden";
+        /*
+        whyBtn.onclick = function(){
+            wrongBox.style.visibility = "visible";
+            wrongBox.classList.remove("popUpAnim"); // reset
+            void wrongBox.offsetWidth;              // force reflow
+            wrongBox.classList.add("popUpAnim");
+
+            questionBox.style.visibility = "hidden";
+            wrongBox.style.visibility = "visible";
+            wrongBox.style.animationPlayState = "running";
+
+            whyBtn.style.visibility = "hidden";
+            question.disabled = true;
+
+            checkBtn.style.visibility = "visible";
+
+        }
+        */
+
+        whyBtn.onclick = function(){
+            // show + restart animation
+            answer1.id = "ans1New";
+
+            wrongBox.style.visibility = "visible";
+            wrongBox.classList.remove("popUpAnim");
+            void wrongBox.offsetWidth;          // reflow to reset
+            wrongBox.classList.add("popUpAnim");
+
+            // rest of your logic
+            questionBox.style.visibility = "hidden";
+            whyBtn.style.visibility = "hidden";
+            question.disabled = true;
+            checkBtn.style.visibility = "visible";
+        };
+
+        wrongBox.addEventListener("animationend", () => {
+        wrongBox.classList.remove("popUpAnim");
+        });
+
+        checkBtn.onclick = function(){
+            checkBtn.style.visibility = "hidden";
+            wrongBox.style.visibility = "hidden";
+
+            question.disabled = false;
+
+            questionBox.style.visibility = "hidden";
+            functionBtn.style.visibility = "hidden";
+            funfactBtn.style.visibility = "visible";
+
+            funfactBox.style.visibility = "hidden";
+            contentbox.style.visibility = "visible";
+
+            backBtn.style.visibility = "visible";
+            backBtn2.style.visibility = "hidden";
+            
+            answer1.id = "ans1";
+            answer2.id = "ans2";
+            answer2.disabled = false;
+        }
+
+        backBtn2.onclick = function(){
+            whyBtn.style.visibility = "hidden";
+            checkBtn.style.visibility = "hidden";
+            wrongBox.style.visibility = "hidden";
+            goodjobBtn.style.visibility = "hidden";
+
+            question.disabled = false;
+
+            questionBox.style.visibility = "hidden";
+            functionBtn.style.visibility = "hidden";
+            funfactBtn.style.visibility = "visible";
+
+            funfactBox.style.visibility = "hidden";
+            contentbox.style.visibility = "visible";
+
+            backBtn.style.visibility = "visible";
+            backBtn2.style.visibility = "hidden";
+            
+            answer1.id = "ans1";
+            answer2.id = "ans2";
+            answer1.disabled = false;
+            answer2.disabled = false;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>HeartBeat❤❤❤</title>
+
+    <style>
+        body{
+            background-image: linear-gradient(#FFE0E0,#FFF5F5);
+        }
+        html, body {
+            height: 100%;    
+            margin: 0;         
+            padding: 0;        
+            border: 5px solid #D4B5B5;
+            box-sizing: border-box; 
+            overflow: hidden;
+        }
+        p{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 90px;
+            display: inline;
+            justify-content: center;
+            align-self: center;
+            text-shadow: 10px 10px 7px #FFB3A7;
+        }
+        #title1{
+            font-size: 50px;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+            color: #FF4E42;
+            position: absolute; 
+            transform: translate(69.5%,-40%);
+            white-space: nowrap;
+            z-index: 1;
+            text-shadow:
+                -3px -3px #810A0A,
+                 3px -3px #810A0A,
+                -3px  3px #810A0A,
+                 3px  3px #810A0A,
+                 0px -3px #810A0A,
+                 0px  3px #810A0A,
+                -3px  0px #810A0A,
+                 3px  0px #810A0A;
+        }
+        #title2{
+            font-size: 50px;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+            color: #3366FF;
+            position: absolute; 
+            transform: translate(55%,86%);
+            white-space: nowrap;
+            z-index: 1;
+            text-shadow:
+                -3px -3px #112D81,
+                 3px -3px #112D81,
+                -3px  3px #112D81,
+                 3px  3px #112D81,
+                 0px -3px #112D81,
+                 0px  3px #112D81,
+                -3px  0px #112D81,
+                 3px  0px #112D81;
+        }
+        #timer{
+            position: absolute;
+            width: 320px;
+            transform: translate(190%,55%);
+        }
+        #text{
+            font-size: 24px;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            text-align: left;
+            color: #7C1D26;
+            position: absolute; 
+            transform: translate(84%,340%);
+            white-space: nowrap;
+            z-index: 1;
+            text-shadow: none;
+        }
+        #question{
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            position: absolute;
+            border: 5px solid #D84E4D;
+            color: #7C1D26;
+            border-radius: 20px;
+            background-color: transparent;
+            font-size: 35px;
+            padding: 20px;
+            padding-left: 100px;
+            padding-right: 100px;
+            transform: translate(16%,400%);
+        }
+        #ans1{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid #D84E4D;
+            color: #7C1D26;
+            border-radius: 20px;
+            background-color: transparent;
+            font-size: 30px;
+            padding: 50px;
+            width: 350px;
+        }
+        #ans2{
+            font-size: 50px;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid #D84E4D;
+            color: #7C1D26;
+            border-radius: 20px;
+            background-color: transparent;
+            font-size: 30px;
+            padding: 50px;
+            width: 350px;
+        }
+        #ans3{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid #D84E4D;
+            color: #7C1D26;
+            border-radius: 20px;
+            background-color: transparent;
+            font-size: 30px;
+            padding: 50px;
+            width: 350px;
+        }
+        #ansBox{
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+            top: 67%;
+        }
+        #wrong1{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #CB0909;
+            border-radius: 20px;
+            background-color: transparent;
+            font-size: 30px;
+            text-shadow: none;
+            position: absolute;
+            transform: translate(118%,1520%);
+            transition: 0.5s;
+        }
+        #wrong2{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #CB0909;
+            border-radius: 20px;
+            background-color: transparent;
+            font-size: 30px;
+            text-shadow: none;
+            position: absolute;
+            transform: translate(637.5%,1520%);
+            transition: 0.5s;
+        }
+        #anstrue{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid #0B874D;
+            color: #2EB772;
+            border-radius: 20px;
+            background-color: transparent;
+            font-size: 30px;
+            padding: 50px;
+            width: 350px;
+            transition: 0.5s;
+        }
+        #nextBtn{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 30px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 15px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #D5DF0D;
+            border: 5px solid #9AA10D;
+            position: absolute;
+            transform: translate(158%,0%);
+        }
+        a{
+            position: absolute;
+        }
+        .WrongAnim{
+            animation-name: WrongAnim;
+            animation-duration: 500ms;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+        }
+        @keyframes WrongAnim{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        #love1{
+            width: 150px;
+            position: absolute;
+            transform: translate(160%,-60%);
+        }
+        #love2{
+            width: 150px;
+            position: absolute;
+            transform: translate(775%,-60%);
+        }
+        #fire1{
+            width: 120px;
+            position: absolute;
+            transform: translate(310%,42%);
+        }
+        #fire2{
+            width: 120px;
+            position: absolute;
+            transform: translate(870%,42%);
+        }
+    </style>
+</head>
+<body>
+    <p id="title1">CABARAN KILAT</p>
+    <p id="title2">HEARTBEAT HERO!</p>
+
+    <img id="timer" src="timergif.gif" alt="timer">
+
+    <p id="text">Jawab soalan dalam 10<br>saat.<br>Klik jawapan yang betul!</p>
+
+    <button id="question">Bahagian yang manakah menerima isyarat daripada nod SA?</button>
+
+    <div id="ansBox">
+        <button id="ans1">GENTIAN<br>PURKINJE</button>
+        <button id="ans2">NOD AV</button>
+        <button id="ans3">NOD<br>SINOATRIUM</button>
+    </div>
+
+    <p id="wrong1">SALAH!</p>
+    <p id="wrong2">SALAH!</p>
+
+    <a href="hbhero3Malay.html">
+    <button id="nextBtn">SETERUSNYA</button>
+    </a>
+
+    <img id="love1" src="love.png" alt="love">
+    <img id="love2" src="love.png" alt="love">
+
+    <img id="fire1" src="fire.png" alt="fire">
+    <img id="fire2" src="fire.png" alt="fire">
+
+
+
+    <script>
+        const ans1 = document.getElementById("ans1");
+        const ans2 = document.getElementById("ans2");
+        const ans3 = document.getElementById("ans3");
+
+        const wrong1 = document.getElementById("wrong1");
+        const wrong2 = document.getElementById("wrong2");
+
+        const timer = document.getElementById("timer");
+        const nextBtn = document.getElementById("nextBtn");
+
+        wrong1.style.visibility = "hidden";
+        wrong2.style.visibility = "hidden";
+        nextBtn.style.visibility = "hidden";
+
+        let done = false;
+        let timeoutId; 
+
+
+        function endQuestion() {
+            if (done) return; 
+    
+            ans2.id = "anstrue";
+    
+            ans1.style.pointerEvents = "none";
+            ans2.style.pointerEvents = "none";
+            ans3.style.pointerEvents = "none";
+
+            timer.style.visibility = "hidden";
+            nextBtn.style.visibility = "visible";
+    
+            wrong1.style.visibility = "visible";
+            wrong2.style.visibility = "visible";
+    
+            wrong1.classList.remove("WrongAnim");
+            void wrong1.offsetWidth;        
+            wrong1.classList.add("WrongAnim"); 
+    
+            wrong2.classList.remove("WrongAnim");
+            void wrong2.offsetWidth;        
+            wrong2.classList.add("WrongAnim"); 
+    
+            nextBtn.classList.remove("WrongAnim");
+            void nextBtn.offsetWidth;        
+            nextBtn.classList.add("WrongAnim");
+    
+            done = true;
+        }
+
+        timeoutId = setTimeout(endQuestion, 10000);
+
+        ans1.onclick = function() {
+            clearTimeout(timeoutId); 
+            endQuestion();
+        }
+
+        ans2.onclick = function() {
+            clearTimeout(timeoutId); 
+            endQuestion();
+        }
+
+        ans3.onclick = function() {
+            clearTimeout(timeoutId);
+            endQuestion();
+        }
+    </script>
+</body>
+</html>

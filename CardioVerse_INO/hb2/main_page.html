@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <title>HeartBeat❤❤❤</title>
+    <style>
+        body{
+            background-image: url(main_bg.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            max-width: 200%;
+            margin: auto;
+            overflow: hidden;
+        }
+        html, body {
+            height: 100%;    
+            margin: 0;         
+            padding: 0;        
+            border: 5px solid #4596A9;
+            box-sizing: border-box; 
+        }
+        #cloud{
+            width: 1600px;
+            margin-top: -215px;
+            margin-bottom: 0;
+            z-index: -2;
+            position: absolute;
+        }
+        p{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 80px;
+            display: inline;
+            justify-content: center;
+            align-self: center;
+            text-shadow: 10px 10px 7px #FFB3A7;
+        }
+        #heart{
+            color: #feb8da;
+            text-shadow:
+                -5px -5px #450311,
+                 5px -5px #450311,
+                -5px  5px #450311,
+                 5px  5px #450311,
+                 0px -5px #450311,
+                 0px  5px #450311,
+                -5px  0px #450311,
+                 5px  0px #450311,
+
+                 12px 10px 6px #FFB3A7;
+        }
+        #beat{
+            color: #9EC9E9;
+            text-shadow:
+                -5px -5px #450311,
+                 5px -5px #450311,
+                -5px  5px #450311,
+                 5px  5px #450311,
+                 0px -5px #450311,
+                 0px  5px #450311,
+                -5px  0px #450311,
+                 5px  0px #450311,
+
+                 12px 10px 6px #FFB3A7;
+        }
+        #title{
+            display: flex;
+            justify-content: center;
+        }
+        #instruction{
+            font-size: 50px;
+            color: #FFFFFF;
+            text-shadow:
+                -5px -5px #AD9FA2,
+                 5px -5px #AD9FA2,
+                -5px  5px #AD9FA2,
+                 5px  5px #AD9FA2,
+                 0px -5px #AD9FA2,
+                 0px  5px #AD9FA2,
+                -5px  0px #AD9FA2,
+                 5px  0px #AD9FA2,
+
+                 10px 10px 6px #FFB3A7;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 600;
+            font-style: normal;
+            text-align: center;
+        }
+        #insBox{
+            margin-top: -40px;
+            text-align: center;
+        }
+        #button{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #eng{
+            display: inline;
+            font-size: 3.5rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 20px;
+            border: 8px solid #4596A9;
+            background-color: #6ABED2;
+            color: #FFFFFF;
+            text-shadow:
+                -5px -5px #4596A9,
+                 5px -5px #4596A9,
+                -5px  5px #4596A9,
+                 5px  5px #4596A9,
+                 0px -5px #4596A9,
+                 0px  5px #4596A9,
+                -5px  0px #4596A9,
+                 5px  0px #4596A9;
+        }
+        #malay{
+            display: inline;
+            font-size: 3.5rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 20px;
+            border: 8px solid #4596A9;
+            background-color: #6ABED2;
+            color: #FFFFFF;
+            text-shadow:
+                -5px -5px #4596A9,
+                 5px -5px #4596A9,
+                -5px  5px #4596A9,
+                 5px  5px #4596A9,
+                 0px -5px #4596A9,
+                 0px  5px #4596A9,
+                -5px  0px #4596A9,
+                 5px  0px #4596A9;
+            padding-left: 75.5px;
+            padding-right: 75.5px;
+        }
+        a{
+            text-decoration: none;
+        }
+        #earth{
+            position: absolute;
+            z-index: -1;
+            width: 650px;
+            animation: moveLeftRight 7s infinite alternate linear,
+                       spin 7s infinite alternate linear;
+        }
+        @keyframes moveLeftRight{
+            from {
+                left: 0;
+            }
+            to {
+                left: 900px;
+            }
+        }
+        @keyframes spin{
+            from { transform: rotate(0deg); }
+            to { transform: rotate(90deg); }
+        }
+    </style>
+    
+</head>
+<body>
+    <img id="earth" src="earth.png" alt="earth">
+    <div id="title">
+    <p id="heart">Heart</p><p id="beat">Beat</p>
+    </div>
+
+    <div id="insBox">
+    <p id="instruction">CHOOSE YOUR LANGUAGE</p>
+    </div>
+
+    <br><br><br><br>
+    <div id="button">
+        <a id="engLink" href="home_eng.html">
+        <button id="eng">ENGLISH</button>
+        </a>
+        <br>
+        <a href="home_malay.html">
+        <button id="malay">MALAY</button>
+        </a>
+    </div>
+
+    <img id="cloud" src="cloud.png" alt="cloud">
+</body>
+</html>

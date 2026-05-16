@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    
+    <title>HeartBeat❤❤❤</title>
+
+    <style>
+        body{
+            background-image: url(bgpixel.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        html, body {
+            height: 100%;    
+            margin: 0;         
+            padding: 0;        
+            border: 7px solid #C7BCB0;
+            box-sizing: border-box; 
+        }
+        p{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 70px;
+            display: inline;
+            justify-content: center;
+            align-self: center;
+            text-shadow: 10px 10px 7px #FFB3A7;
+        }
+        #p1{
+            color: #D94A4A;
+            text-shadow:
+                -5px -5px #790808,
+                 5px -5px #790808,
+                -5px  5px #790808,
+                 5px  5px #790808,
+                 0px -5px #790808,
+                 0px  5px #790808,
+                -5px  0px #790808,
+                 5px  0px #790808;
+        }
+        #p1box{
+            position: absolute;
+            transform: translate(14%,32%);
+        }
+        #p2{
+            color: #A12C2C;
+            text-shadow:
+                -5px -5px #790808,
+                 5px -5px #790808,
+                -5px  5px #790808,
+                 5px  5px #790808,
+                 0px -5px #790808,
+                 0px  5px #790808,
+                -5px  0px #790808,
+                 5px  0px #790808;
+            font-size: 71px;
+        }
+        #p2box{
+            position: absolute;
+            transform: translate(30.8%,31%);
+            z-index: -1;
+        }
+        #p3box{
+            position: absolute;
+            transform: translate(141.8%,31%);
+            z-index: -1;
+        }
+        #loBox{
+            border: 5px solid #9B4747;
+            max-width: fit-content;
+            text-align: center;
+            background-color: #FFB6B9;
+            border-radius: 24px;
+            padding: 20px;
+            padding-top: 7px;
+        }
+        #loText{
+            font-family: "Notable", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #762424;
+            font-size: 38px;
+            text-shadow:
+                -2px -2px #C97070,
+                 2px -2px #C97070,
+                -2px  2px #C97070,
+                 2px  2px #C97070,
+                 0px -2px #C97070,
+                 0px  2px #C97070,
+                -2px  0px #C97070,
+                 2px  0px #C97070;
+        }
+        #loContent{
+            font-family: "Gloria Hallelujah", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: #380909;
+            font-size: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        #scBox{
+            border: 5px solid #9B4747;
+            max-width: fit-content;
+            text-align: center;
+            background-color: #FFB6B9;
+            border-radius: 24px;
+            padding: 20px;
+            padding-top: 0px;
+        }
+        #scText{
+            font-family: "Notable", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #762424;
+            font-size: 38px;
+            text-shadow:
+                -2px -2px #C97070,
+                 2px -2px #C97070,
+                -2px  2px #C97070,
+                 2px  2px #C97070,
+                 0px -2px #C97070,
+                 0px  2px #C97070,
+                -2px  0px #C97070,
+                 2px  0px #C97070;
+        }
+        #scContent{
+            font-family: "Gloria Hallelujah", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: #380909;
+            font-size: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        #mainBox{
+            position: absolute;
+            transform: translate(65%,27%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #nextBtn{
+            display: inline;
+            font-size: 2rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 15px;
+            border: 8px solid #F06C6C;
+            background-color: #FFACAD;
+            color: #FFFFFF;
+            position: absolute; 
+            left: 85%;
+            top: 85%;
+            padding-left: 22px;
+            padding-right: 20px;
+        }
+        a{
+            text-decoration: none;
+        }
+        #love1{
+            width: 140px;
+            position: absolute;
+            transform: translate(180%,150%);
+            animation: updown1 3s infinite ease-in-out;
+        }
+        #love2{
+            width: 140px;
+            position: absolute;
+            transform: translate(110%,380%);
+            animation: updown2 3s infinite ease-in-out;
+        }
+        #love3{
+            width: 140px;
+            position: absolute;
+            transform: translate(850%,190%);
+            animation: updown3 3s infinite ease-in-out;
+        }
+        @keyframes updown1{
+            0%{transform: translate(180%,150%);}
+            50%{transform: translate(180%,100%);}
+            100%{transform: translate(180%,150%);}
+        }
+        @keyframes updown2{
+            0%{transform: translate(110%,380%);}
+            50%{transform: translate(110%,330%);}
+            100%{transform: translate(110%,380%);}
+        }
+        @keyframes updown3{
+            0%{transform: translate(850%,190%);}
+            50%{transform: translate(850%,240%);}
+            100%{transform: translate(850%,190%);}
+        }
+    </style>
+</head>
+<body>
+    <div id="p1box">
+    <p id="p1">LEARNING OUTCOMES</p>
+    </div>
+    <div id="p2box">
+    <p id="p2">LEARNING</p>
+    </div>
+    <div id="p3box">
+    <p id="p2">OUTCOMES</p>
+    </div>
+
+    <div id="mainBox">
+        <div id="loBox">
+            <b style="font-size: 38px;">📌</b> <b id="loText"> LEARNING OBJECTIVE</b>
+            <br><br>
+            <b id="loContent">Understanding the structure and function of key <br>heart components</b>
+        </div>
+        <br>
+        <div id="scBox">
+            <b style="font-size: 38px;">🎯</b> <b id="scText"> SUCCESS CRITERIA</b>
+            <br><br>
+            <b id="scContent">♡ Identify major heart parts<br>♡ Explain functions of each segment in the heart<br>♡ Understand the heartbeat mechanism<br>♡ Answer quizzes provided correctly</b>
+        </div>
+    </div>
+
+    <img id="love1" src="love.png" alt="love">
+    <img id="love2" src="love.png" alt="love">
+    <img id="love3" src="love.png" alt="love">
+
+    <a href="content.html">
+        <button id="nextBtn">NEXT</button>
+    </a>
+</body>
+</html>

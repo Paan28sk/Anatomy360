@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>HeartBeat❤❤❤</title>
+
+    <style>
+        html, body {
+            height: 100%;    
+            margin: 0;         
+            padding: 0;        
+            border: 4px solid #6C2020;
+            box-sizing: border-box; 
+            overflow: hidden;
+        }
+        
+        #jantung{
+            width: 539px;
+            position: absolute;
+            z-index: -1;
+            left: 30%;
+            animation: dubdab 2s infinite ease;
+        }
+        @keyframes dubdab{
+            0%{ transform: scale(1,1); }
+            50%{transform: scale(1.2,1.2);}
+            100%{ transform: scale(1,1); }
+        }
+        #heart{
+            color: #feb8da;
+            text-shadow:
+                -5px -5px #450311,
+                 5px -5px #450311,
+                -5px  5px #450311,
+                 5px  5px #450311,
+                 0px -5px #450311,
+                 0px  5px #450311,
+                -5px  0px #450311,
+                 5px  0px #450311,
+
+                 12px 10px 6px #FFB3A7;
+        }
+        #beat{
+            color: #9EC9E9;
+            text-shadow:
+                -5px -5px #450311,
+                 5px -5px #450311,
+                -5px  5px #450311,
+                 5px  5px #450311,
+                 0px -5px #450311,
+                 0px  5px #450311,
+                -5px  0px #450311,
+                 5px  0px #450311,
+
+                 12px 10px 6px #FFB3A7;
+        }
+        #title{
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            position: absolute;
+            top: 5%;
+            bottom: 50%;
+            transform: translate(30%,50%);
+        }
+        p{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 80px;
+            display: inline;
+            justify-content: center;
+            align-self: center;
+            text-shadow: 10px 10px 7px #FFB3A7;
+        }
+        #colon{
+            color: #EB493E;
+            text-shadow:
+                -5px -5px #450311,
+                 5px -5px #450311,
+                -5px  5px #450311,
+                 5px  5px #450311,
+                 0px -5px #450311,
+                 0px  5px #450311,
+                -5px  0px #450311,
+                 5px  0px #450311,
+
+                 12px 10px 6px #FFB3A7;
+        }
+        #motto{
+            font-size: 36px;
+            color: #FFE5D9;
+            text-shadow:
+                -2px -2px #6C2020,
+                 2px -2px #6C2020,
+                -2px  2px #6C2020,
+                 2px  2px #6C2020,
+                 0px -2px #6C2020,
+                 0px  2px #6C2020,
+                -2px  0px #6C2020,
+                 2px  0px #6C2020,
+
+                 8px 8px 6px #BD0F0F40;
+        }
+        #mottoBox{
+            position: absolute;
+            top: 53%;
+            transform: translate(5%,0.5%);
+        }
+        #enterBtn{
+            display: inline;
+            font-size: 3.8rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 15px;
+            border: 8px solid #6C2020;
+            background-color: #F76D6D;
+            color: #FFFFFF;
+            text-shadow:
+                -5px -5px #B4B4AD,
+                 5px -5px #B4B4AD,
+                -5px  5px #B4B4AD,
+                 5px  5px #B4B4AD,
+                 0px -5px #B4B4AD,
+                 0px  5px #B4B4AD,
+                -5px  0px #B4B4AD,
+                 5px  0px #B4B4AD;
+            position: absolute; 
+            left: 36%;
+            top: 62%;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        a{
+            text-decoration: none;
+        }
+        #changeLangBtn{
+            text-align: center;
+            display: inline;
+            font-size: 1.6rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            padding: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border: 8px solid #9EA525;
+            background-color: #E5EE36;
+            color: #FFFFFF;
+            text-shadow:
+                -4px -4px #B4B4AD,
+                 4px -4px #B4B4AD,
+                -4px  4px #B4B4AD,
+                 4px  4px #B4B4AD,
+                 0px -4px #B4B4AD,
+                 0px  4px #B4B4AD,
+                -4px  0px #B4B4AD,
+                 4px  0px #B4B4AD;
+            margin: 10px;
+        }
+        #star1{
+            position: absolute;
+            width: 282px;
+            left: 5%;
+            bottom: 0.1%;
+        }
+        #star2{
+            position: absolute;
+            width: 282px;
+            right: 2%;
+            bottom: 60%;
+        }
+        #red{
+            position: absolute;
+            width: 182px;
+            transform: translate(400%,260%);
+        }
+        #blue{
+            position: absolute;
+            width: 182px;
+            transform: translate(303%,320%);
+        }
+        #petak{
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            transform: translate(-1%,-1%);
+        }
+        #line1{
+            height: 10px;
+            background-color: #6C2020;
+            border: none;
+            position: fixed;  
+            top: -5px;
+            left: 0;
+            width: 100%;
+            z-index: 12;
+        }
+        #line2{
+            height: 7px;
+            background-color: #6C2020;
+            border: none;
+            position: fixed;  
+            bottom: 195px;
+            left: -410px;
+            z-index: 11;
+            rotate: 90deg;
+            width: 829px;
+        }
+        #line3{
+            height: 7px;
+            background-color: #6C2020;
+            border: none;
+            position: fixed;  
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            z-index: 12;
+        }
+        #line4{
+            height: 7px;
+            background-color: #6C2020;
+            border: none;
+            position: fixed;  
+            bottom: 195px;
+            left: -410px;
+            z-index: 11;
+            rotate: 90deg;
+            width: 829px;
+        }
+    </style>
+</head>
+<body>
+    <img id="petak" src="startbg.png" alt="petak">
+
+    <img id="jantung" src="jantung.png" alt="jantung">
+    <div id="title">
+    <p id="heart">Heart</p><p id="beat">Beat</p><p id="colon">:</p>
+    </div>
+    <div id="mottoBox"><p id="motto">Belajar Mengikut Rentak Jantung</p></div>
+
+    <a href="losc_pageMalay.html">
+        <button id="enterBtn">MASUK</button>
+    </a>
+
+    <a href="main_page.html">
+        <button id="changeLangBtn">Tukar <br>Bahasa</button>
+    </a>
+
+    <img id="star1" src="star.png" alt="star">
+    <img id="star2" src="star.png" alt="star">
+
+    <img id="blue" src="blue.png" alt="blue">
+    <img id="red" src="red.png" alt="red">
+
+    <hr id="line1">
+    <hr id="line2">
+    <hr id="line3">
+    <hr id="line4">
+
+</body>
+</html>

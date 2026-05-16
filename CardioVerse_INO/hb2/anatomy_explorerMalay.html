@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <title>HeartBeat❤❤❤</title>
+
+    <style>
+        body{
+            background-image: linear-gradient(#FFE0E0,#FFF5F5);
+        }
+        html, body {
+            height: 100%;    
+            margin: 0;         
+            padding: 0;        
+            border: 5px solid #D4B5B5;
+            box-sizing: border-box; 
+            overflow: hidden;
+        }
+        p{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 50px;
+            display: inline;
+            justify-content: center;
+            align-self: center;
+            text-shadow: 10px 10px 7px #FFB3A7;
+        }
+        #p1{
+            font-size: 58px;
+            background: linear-gradient(to right,#DA4B4B,#5898D8); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent; 
+            text-shadow: none;
+            z-index: 3;
+        }
+        #p1front{
+            font-size: 58px;
+            background: #DA4B4B; 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent; 
+            text-shadow: none;
+        }
+        #p1shadow{
+            font-size: 58px;
+            color: 790808;
+            position: absolute;
+            transform: translate(-50%,-189%);
+            white-space: nowrap;
+            z-index: -1;
+            text-shadow:
+                -4px -4px #790808,
+                 4px -4px #790808,
+                -4px  4px #790808,
+                 4px  4px #790808,
+                 0px -4px #790808,
+                 0px  4px #790808,
+                -4px  0px #790808,
+                 4px  0px #790808;
+        }
+        #p1box{
+            text-align: center;
+            margin-top: 18px;
+            position: relative;
+            z-index: 2;
+        }
+        #p2{
+            font-size: 58px;
+            background: linear-gradient(to right,#A12C2C,#26128A); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent; 
+            text-shadow: none;
+        }
+        #p2front{
+            font-size: 58px;
+            background: #A12C2C; 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent; 
+            text-shadow: none;
+        }
+        #p2shadow{
+            font-size: 58px;
+            color: 790808;
+            position: absolute;
+            transform: translate(-50%,-189%);
+            white-space: nowrap;
+            z-index: -1;
+            text-shadow:
+                -4px -4px #790808,
+                 4px -4px #790808,
+                -4px  4px #790808,
+                 4px  4px #790808,
+                 0px -4px #790808,
+                 0px  4px #790808,
+                -4px  0px #790808,
+                 4px  0px #790808;
+        }
+        #p2box{
+            text-align: center;
+            margin-top: -68px;
+            position: relative;
+            transform: translate(0.7%,-2%);
+            z-index: 1;
+        }
+        #jantung{
+            width: 715px;
+            position: absolute;
+            transform: translate(35%,-2%);
+        }
+        a{
+            text-decoration: none;
+        }
+        #backBtn{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 14px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            text-shadow:
+                -1px -1px #655A5A,
+                 1px -1px #655A5A,
+                -1px  1px #655A5A,
+                 1px  1px #655A5A,
+                 0px -1px #655A5A,
+                 0px  1px #655A5A,
+                -1px  0px #655A5A,
+                 1px  0px #655A5A;
+            padding: 15px;
+            padding-left: 25px;
+            padding-right: 25px;
+            background-color: #D68389;
+            border: 5px solid #AB444C;
+            border-radius: 30px;
+            position: absolute;
+            transform: translate(20%,850%);
+        }
+        #circleAortaBtn{
+            padding: 50px;
+            position: absolute;
+            border: 5px solid #6B0808;
+            border-radius: 100px;
+            background-color: transparent;
+            transform: translate(470%,20%);
+        }
+        #AortaBtn{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 21px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: #FF5E5E;
+            border: 7px solid #DF3838;
+            border-radius: 40px;
+            position: absolute;
+            transform: translate(155%,50%);
+            text-shadow:
+                -1px -1px #DF3838,
+                 1px -1px #DF3838,
+                -1px  1px #DF3838,
+                 1px  1px #DF3838,
+                 0px -1px #DF3838,
+                 0px  1px #DF3838,
+                -1px  0px #DF3838,
+                 1px  0px #DF3838;
+        }
+        #circleVenaBtn{
+            padding: 60px;
+            position: absolute;
+            border: 5px solid #1962B8;
+            border-radius: 100px;
+            background-color: transparent;
+            transform: translate(315%,90%);
+        }
+        #VenaBtn{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 21px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 10px;
+            padding-left: 60px;
+            padding-right: 60px;
+            background-color: #3D7FFF;
+            border: 7px solid #16449E;
+            border-radius: 40px;
+            position: absolute;
+            transform: translate(80%,190%);
+        }
+        #circleSemilunarBtn{
+            padding: 45px;
+            padding-left: 65px;
+            padding-right: 65px;
+            position: absolute;
+            border: 5px solid #0D9018;
+            border-radius: 50%;
+            background-color: transparent;
+            transform: translate(360%,220%);
+        }
+        #SemilunarBtn{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 21px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+            background-color: #66CC72;
+            border: 7px solid #259933;
+            border-radius: 40px;
+            position: absolute;
+            z-index: 2;
+            transform: translate(75%,305%);
+        }
+        #SemilunarLine{
+            border-top: 5px solid #259933;
+            position: relative;
+            transform: translate(-145%,4850%);
+            width: 10%;
+            z-index: 1;
+        }
+        #circleTricuspidBtn{
+            padding: 45px;
+            padding-left: 65px;
+            padding-right: 65px;
+            position: absolute;
+            border: 5px solid #FFF316;
+            border-radius: 50%;
+            background-color: transparent;
+            transform: translate(320%,270%);
+        }
+        #TricuspidBtn{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 21px;
+            justify-content: center;
+            align-self: center;
+            color: #4B3621;
+            padding: 15px;
+            padding-left: 25px;
+            padding-right: 25px;
+            background-color: #F8D26D;
+            border: 7px solid #B68439;
+            border-radius: 45px;
+            position: absolute;
+            z-index: 2;
+            transform: translate(100%,400%);
+        }
+        #circleArteryBtn{
+            padding: 50px;
+            padding-left: 65px;
+            padding-right: 65px;
+            position: absolute;
+            border: 5px solid #1962B8;
+            border-radius: 50%;
+            background-color: transparent;
+            transform: translate(470%,45%);
+        }
+        #ArteryBtn{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 21px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #5EA8FF;
+            border: 7px solid #1A65BC;
+            border-radius: 50px;
+            position: absolute;
+            transform: translate(300%,25%);
+        }
+        #circleVeinsBtn{
+            padding: 50px;
+            padding-left: 60px;
+            padding-right: 60px;
+            position: absolute;
+            border: 5px solid #6B0808;
+            border-radius: 50%;
+            background-color: transparent;
+            transform: translate(530%,120%);
+        }
+        #VeinsBtn{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 21px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: #FF9AA2;
+            border: 7px solid #EE6C76;
+            border-radius: 50px;
+            position: absolute;
+            transform: translate(340%,200%);
+        }
+        #circleBicuspidBtn{
+            padding: 45px;
+            padding-left: 65px;
+            padding-right: 65px;
+            position: absolute;
+            border: 5px solid #FFF316;
+            border-radius: 50%;
+            background-color: transparent;
+            transform: translate(450%,210%);
+        }
+        #BicuspidBtn{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 21px;
+            justify-content: center;
+            align-self: center;
+            color: #4B3621;
+            padding: 15px;
+            padding-left: 35px;
+            padding-right: 35px;
+            background-color: #F8D26D;
+            border: 7px solid #B68439;
+            border-radius: 45px;
+            position: absolute;
+            z-index: 2;
+            transform: translate(310%,280%);
+        }
+        #circleSeptumBtn{
+            padding: 55px;
+            position: absolute;
+            border: 5px solid #8C76B6;
+            border-radius: 100px;
+            background-color: transparent;
+            transform: translate(696%,365%);
+        }
+        #SeptumBtn{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 21px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #C1A2FF;
+            border: 7px solid #8C76B6;
+            border-radius: 40px;
+            position: absolute;
+            transform: translate(408%,694%);
+        }
+    </style>
+</head>
+<body>
+    <div id="p1box">
+    <p id="p1front">PENJELA<p id="p1">JAH ANATOMI</p></p><br>
+    <p id="p1shadow">PENJELAJAH ANATOMI</p>
+    </div>
+    <div id="p2box">
+    <p id="p2front">PENJELA<p id="p2">JAH ANATOMI</p></p><br>
+    <p id="p2shadow">PENJELAJAH ANATOMI</p>
+    </div>
+
+    <img id="jantung" src="jantungexplorer.png" alt="jantung">
+    <a href="contentMalay.html">
+        <button id="backBtn">KEMBALI</button>
+    </a>
+
+    <a href="aortaMalay.html">
+        <button id="circleAortaBtn"></button>
+    </a>
+    <a href="aortaMalay.html">
+        <button id="AortaBtn">Aorta</button>
+    </a>
+
+
+    <a href="venaMalay.html">
+        <button id="circleVenaBtn"></button>
+    </a>
+    <a href="venaMalay.html">
+        <button id="VenaBtn">Vena<br>kava</button>
+    </a>
+
+
+    <a href="semilunarMalay.html">
+        <button id="circleSemilunarBtn"></button>
+    </a>
+    <a href="semilunarMalay.html">
+        <button id="SemilunarBtn">Injap<br>sabit</button>
+    </a>
+    <a href="">
+        <hr id="SemilunarLine">
+    </a>
+
+    <a href="tricuspidMalay.html">
+        <button id="circleTricuspidBtn"></button>
+    </a>
+    <a href="tricuspidMalay.html">
+        <button id="TricuspidBtn">Injap<br>trikuspid</button>
+    </a>
+
+    <a href="arteryMalay.html">
+        <button id="circleArteryBtn"></button>
+    </a>
+    <a href="arteryMalay.html">
+        <button id="ArteryBtn">Arteri<br>pulmonari</button>
+    </a>
+
+    <a href="veinsMalay.html">
+        <button id="circleVeinsBtn"></button>
+    </a>
+    <a href="veinsMalay.html">
+        <button id="VeinsBtn">Vena<br>pulmonari</button>
+    </a>
+
+    <a href="bicuspidMalay.html">
+        <button id="circleBicuspidBtn"></button>
+    </a>
+    <a href="bicuspidMalay.html">
+        <button id="BicuspidBtn">Injap<br>bikuspid</button>
+    </a>
+
+    <a href="septumMalay.html">
+        <button id="circleSeptumBtn"></button>
+    </a>
+    <a href="septumMalay.html">
+        <button id="SeptumBtn">Septum</button>
+    </a>
+</body>
+</html>

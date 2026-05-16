@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <title>HeartBeat❤❤❤</title>
+
+    <style>
+        body{
+            background-image: linear-gradient(#D1F3FF,#FFFFFF);
+        }
+        html, body {
+            height: 100%;    
+            margin: 0;         
+            padding: 0;        
+            border: 5px solid #6C98C5;
+            box-sizing: border-box; 
+            overflow: hidden;
+        }
+        p{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 90px;
+            display: inline;
+            justify-content: center;
+            align-self: center;
+            text-shadow: 10px 10px 7px #FFB3A7;
+        }
+        #title1{
+            font-size: 90px;
+            background: #48879C; 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent; 
+            text-shadow: none;
+        }
+        #title{
+            font-size: 90px;
+            background: linear-gradient(to right,#48879C,#45B8DE); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent; 
+            text-shadow: none;
+        }
+        #shadow{
+            font-size: 90px;
+            position: absolute;
+            transform: translate(48%,120%);
+            color: #FFFFFF;
+            z-index: 0;
+            text-shadow:
+                -3px -3px #FFFFFF,
+                 3px -3px #FFFFFF,
+                -3px  3px #FFFFFF,
+                 3px  3px #FFFFFF,
+                 0px -3px #FFFFFF,
+                 0px  3px #FFFFFF,
+                -3px  0px #FFFFFF,
+                 3px  0px #FFFFFF;
+        }
+        #titlebox{
+            position: absolute;
+            transform: translate(48%,210%);
+            z-index: 1;
+        }
+        #suncloud{
+            width: 400px;
+            position: absolute;
+            transform: translate(280%,-25%);
+        }
+        #desc{
+            font-size: 30px;
+            color: #235386; 
+            position: absolute;
+            transform: translate(33%,920%);
+            text-shadow:
+                -3px -3px #FFFFFF,
+                 3px -3px #FFFFFF,
+                -3px  3px #FFFFFF,
+                 3px  3px #FFFFFF,
+                 0px -3px #FFFFFF,
+                 0px  3px #FFFFFF,
+                -3px  0px #FFFFFF,
+                 3px  0px #FFFFFF;
+        }
+        #backBtn{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 90px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            text-shadow:
+                -1px -1px #655A5A,
+                 1px -1px #655A5A,
+                -1px  1px #655A5A,
+                 1px  1px #655A5A,
+                 0px -1px #655A5A,
+                 0px  1px #655A5A,
+                -1px  0px #655A5A,
+                 1px  0px #655A5A;
+            padding: 30px;
+            padding-left: 100px;
+            padding-right: 100px;
+            background-color: #83B6D6;
+            border: 5px solid #4F91BA;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(87%,245%);
+        }
+        a{
+            text-decoration: none;
+            position: absolute;
+        }
+        #cloud1{
+            width: 1500px;
+            position: absolute;
+            transform: translate(-16%,102%);
+            z-index: -1;
+        }
+        #cloud2{
+            width: 1500px;
+            position: absolute;
+            transform: translate(37%,102%);
+            z-index: -1;
+        }
+        #line1{
+            height: 10px;
+            background-color: #6C98C5;
+            border: none;
+            position: fixed;  
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        #line2{
+            height: 10px;
+            background-color: #6C98C5;
+            border: none;
+            position: fixed;  
+            bottom: -8px;
+            left: -767px;
+            width: 100%;
+            z-index: 1;
+            rotate: 90deg;
+        }
+        #line3{
+            height: 10px;
+            background-color: #6C98C5;
+            border: none;
+            position: fixed;  
+            bottom: -8px;
+            right: -767px;
+            width: 100%;
+            z-index: 1;
+            rotate: 90deg;
+        }
+    </style>
+</head>
+<body>
+    <div id="titlebox">
+    <p id="title1">GOO</p><p id="title">D JOB!</p><br>
+    </div>
+    <p id="shadow">GOOD JOB!</p>
+
+    <img id="suncloud" src="suncloud.png" alt="suncloud">
+    <p id="desc">You have completed brilliantly!</p>
+
+    <a href="content.html">
+    <button id="backBtn">BACK</button>
+    </a>
+
+    <img id="cloud1" src="cloud.png" alt="cloud">
+    <img id="cloud2" src="cloud.png" alt="cloud">
+    <hr id="line1">
+    <hr id="line2">
+    <hr id="line3">
+</body>
+</html>
+
+
+
+
+

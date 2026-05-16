@@ -1,0 +1,2579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
+    <title>HeartBeat❤❤❤</title>
+
+    <style>
+        html, body {
+            height: 100%;    
+            margin: 0;         
+            padding: 0;        
+            box-sizing: border-box; 
+            overflow: hidden;
+        }
+        p{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 90px;
+            display: inline;
+            justify-content: center;
+            align-self: center;
+            text-shadow: 10px 10px 7px #FFB3A7;
+        }
+        #bg{
+            width: 100%;
+        }
+        #shade1{
+            z-index: 10;
+            position: absolute;
+            transform: translate(-100%,0%);
+            opacity: 0.4;
+        }
+        #line1{
+            height: 10px;
+            background-color: #DE4C4C;
+            border: none;
+            position: fixed;  
+            top: -8px;
+            left: 0;
+            width: 100%;
+            z-index: 12;
+        }
+        #line2{
+            height: 10px;
+            background-image: linear-gradient(to right,#DE4C4C,#5E77C1);
+            border: none;
+            position: fixed;  
+            bottom: 300px;
+            left: -495px;
+            z-index: 11;
+            rotate: 90deg;
+            width: 1000px;
+        }
+        #line3{
+            height: 10px;
+            background-image: linear-gradient(to right,#DE4C4C,#5E77C1);
+            border: none;
+            position: fixed;  
+            bottom: 300px;
+            right: -495px;
+            z-index: 11;
+            rotate: 90deg;
+            width: 1000px;
+        }
+        #line4{
+            height: 10px;
+            background-color: #5E77C1;
+            border: none;
+            position: fixed;  
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            z-index: 12;
+        }
+        #doctor{
+            width: 200px;
+            position: absolute;
+            transform: translate(-120%,260%);
+            z-index: 11;
+        }
+        #textbox{
+            position: absolute;
+            z-index: 11;
+            width: 200px;
+            transform: translate(-120%,320%);
+        }
+        #hint{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 14px;
+            color: #000000;
+            margin-top: -20px;
+            text-shadow: none;
+            position: absolute;
+            text-align: center;
+            transform: translate(-126%,66%);
+            z-index: 11;
+            white-space: nowrap;
+        }
+        #questnum{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #82902A;
+            padding: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #EEEA0E;
+            border: 1px solid #000000;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-443%,-560%);
+            z-index: 11;
+        }
+        #greyBar{
+            position: absolute;
+            padding: 25px;
+            padding-left: 400px;
+            padding-right: 400px;
+            background-color: #A9A5A5;
+            border: none;
+            transform: translate(-104%,70%);
+            z-index: 11;
+        }
+        #redBar{
+            position: absolute;
+            padding: 25px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: #C64343;
+            border: none;
+            transform: translate(-1040%,70%);
+            z-index: 11;
+        }
+        #love{
+            position: absolute;
+            width: 100px;
+            transform: translate(-870%,11%);
+            z-index: 12;
+        }
+        #title{
+            font-size: 1.6rem;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            color: #495054;
+            text-shadow:
+                -2px -2px #96A0A6,
+                 2px -2px #96A0A6,
+                -2px  2px #96A0A6,
+                 2px  2px #96A0A6,
+                 0px -2px #96A0A6,
+                 0px  2px #96A0A6,
+                -2px  0px #96A0A6,
+                 2px  0px #96A0A6;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-160%,-1070%);
+            z-index: 11;
+        }
+        #question{
+            font-family: "Slackey", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.9rem;
+            text-shadow: none;
+            color: #6B1010;
+            position: absolute;
+            transform: translate(-158%,-190%);
+            z-index: 11;
+            white-space: nowrap;
+            text-align: center;
+        }
+        #ans1{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 32px;
+            padding-left: 55px;
+            padding-right: 55px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-150%,-10%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans1:hover{
+            transform: translate(-150.5%,-10%) scale(1.1);
+        }
+        #ansFalse{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 32px;
+            padding-left: 55px;
+            padding-right: 55px;
+            background-color: #F8D7DA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-150%,-10%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #ans2{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 20px;
+            padding-left: 42px;
+            padding-right: 42px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-150%,130%);
+            z-index: 11;
+            transition: 700ms;
+        }
+        #ans2:hover{
+            transform: translate(-150%,130%) scale(1.1);      
+        }
+        #ansTrue{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 20px;
+            padding-left: 42px;
+            padding-right: 42px;
+            background-color: #D4EDDA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-150%,130%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #nextBtn{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: #766FE9;
+            border: 5px solid #686A65;
+            border-radius: 15px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-110%,300%);
+            z-index: 11;
+        }
+
+        #questnum2{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #82902A;
+            padding: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #EEEA0E;
+            border: 1px solid #000000;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-443%,-560%);
+            z-index: 11;
+        }
+        #hint2{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 12.3px;
+            color: #000000;
+            margin-top: -20px;
+            text-shadow: none;
+            position: absolute;
+            text-align: center;
+            transform: translate(-135%,60%);
+            z-index: 11;
+            white-space: nowrap;
+        }
+        #question2{
+            font-family: "Slackey", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.9rem;
+            text-shadow: none;
+            color: #6B1010;
+            position: absolute;
+            transform: translate(-157%,-430%);
+            z-index: 11;
+            white-space: nowrap;
+            text-align: center;
+        }
+        #ans1_2{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 32px;
+            padding-left: 50px;
+            padding-right: 50px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-151%,-10%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans1_2:hover{
+            transform: translate(-151%,-10%) scale(1.1);
+        }
+        #ans1_2Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 32px;
+            padding-left: 50px;
+            padding-right: 50px;
+            background-color: #F8D7DA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-151%,-10%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #ans2_2{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 32px;
+            padding-left: 25px;
+            padding-right: 25px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-151%,130%);
+            z-index: 11;
+            transition: 700ms;
+        }
+        #ans2_2:hover{
+            transform: translate(-151%,130%) scale(1.1);      
+        }
+        #ans2_2Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 32px;
+            padding-left: 25px;
+            padding-right: 25px;
+            background-color: #D4EDDA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-151%,130%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #nextBtn2{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: #766FE9;
+            border: 5px solid #686A65;
+            border-radius: 15px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-110%,300%);
+            z-index: 11;
+        }
+        #redBar2{
+            position: absolute;
+            padding: 25px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: #C64343;
+            border: none;
+            transform: translate(-940%,70%);
+            z-index: 11;
+            animation: anim2 1200ms ease-in-out 1;
+            animation-play-state: paused;
+        }
+        @keyframes anim2{
+            0%{
+                transform: translate(-1040%,70%);
+            }
+            100%{
+                transform: translate(-940%,70%);
+            }
+        }
+
+
+        #hint3{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 13px;
+            color: #000000;
+            margin-top: -20px;
+            text-shadow: none;
+            position: absolute;
+            text-align: center;
+            transform: translate(-124%,65%);
+            z-index: 11;
+            white-space: nowrap;
+        }
+        #questnum3{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #82902A;
+            padding: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #EEEA0E;
+            border: 1px solid #000000;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-443%,-560%);
+            z-index: 11;
+        }
+        #question3{
+            font-family: "Slackey", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.9rem;
+            text-shadow: none;
+            color: #6B1010;
+            position: absolute;
+            transform: translate(-148%,-190%);
+            z-index: 11;
+            white-space: nowrap;
+            text-align: center;
+        }
+        #ans1_3{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 105px;
+            padding-right: 105px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-180.5%,-10%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans1_3:hover{
+            transform: translate(-180.5%,-10%) scale(1.1);
+        }
+        #ans1_3Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 105px;
+            padding-right: 105px;
+            background-color: #D4EDDA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-180.5%,-10%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #ans2_3{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 93px;
+            padding-right: 93px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-180.5%,130%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans2_3:hover{
+            transform: translate(-180.5%,130%) scale(1.1);      
+        }
+        #ans2_3Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 93px;
+            padding-right: 93px;
+            background-color: #F8D7DA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-180.5%,130%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #nextBtn3{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: #766FE9;
+            border: 5px solid #686A65;
+            border-radius: 15px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-110%,300%);
+            z-index: 11;
+        }
+        #redBar3{
+            position: absolute;
+            padding: 25px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: #C64343;
+            border: none;
+            transform: translate(-840%,70%);
+            z-index: 11;
+            animation: anim3 1200ms ease-in-out 1;
+            animation-play-state: paused;
+        }
+        @keyframes anim3{
+            0%{
+                transform: translate(-940%,70%);
+            }
+            100%{
+                transform: translate(-840%,70%);
+            }
+        }
+
+
+
+        #hint4{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 12px;
+            color: #000000;
+            margin-top: -20px;
+            text-shadow: none;
+            position: absolute;
+            text-align: center;
+            transform: translate(-130%,55%);
+            z-index: 11;
+            white-space: nowrap;
+        }
+        #questnum4{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #82902A;
+            padding: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #EEEA0E;
+            border: 1px solid #000000;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-443%,-560%);
+            z-index: 11;
+        }
+        #question4{
+            font-family: "Slackey", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.9rem;
+            text-shadow: none;
+            color: #6B1010;
+            position: absolute;
+            transform: translate(-141%,-190%);
+            z-index: 11;
+            white-space: nowrap;
+            text-align: center;
+        }
+        #ans1_4{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 105px;
+            padding-right: 105px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-180.5%,-10%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans1_4:hover{
+            transform: translate(-180.5%,-10%) scale(1.1);
+        }
+        #ans1_4Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 105px;
+            padding-right: 105px;
+            background-color: #D4EDDA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-180.5%,-10%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #ans2_4{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 143px;
+            padding-right: 143px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-180.5%,130%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans2_4:hover{
+            transform: translate(-180.5%,130%) scale(1.1);      
+        }
+        #ans2_4Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 143px;
+            padding-right: 143px;
+            background-color: #F8D7DA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-180.5%,130%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #nextBtn4{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: #766FE9;
+            border: 5px solid #686A65;
+            border-radius: 15px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-110%,300%);
+            z-index: 11;
+        }
+        #redBar4{
+            position: absolute;
+            padding: 25px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: #C64343;
+            border: none;
+            transform: translate(-740%,70%);
+            z-index: 11;
+            animation: anim4 1200ms ease-in-out 1;
+            animation-play-state: paused;
+        }
+        @keyframes anim4{
+            0%{
+                transform: translate(-840%,70%);
+            }
+            100%{
+                transform: translate(-740%,70%);
+            }
+        }
+
+        #hint5{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 13px;
+            color: #000000;
+            margin-top: -20px;
+            text-shadow: none;
+            position: absolute;
+            text-align: center;
+            transform: translate(-133%,70%);
+            z-index: 11;
+            white-space: nowrap;
+        }
+        #questnum5{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #82902A;
+            padding: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #EEEA0E;
+            border: 1px solid #000000;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-443%,-560%);
+            z-index: 11;
+        }
+        #question5{
+            font-family: "Slackey", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.9rem;
+            text-shadow: none;
+            color: #6B1010;
+            position: absolute;
+            transform: translate(-140%,-190%);
+            z-index: 11;
+            white-space: nowrap;
+            text-align: center;
+        }
+        #ans1_5{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 130px;
+            padding-right: 130px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-202.5%,-10%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans1_5:hover{
+            transform: translate(-202.5%,-10%) scale(1.1);
+        }
+        #ans1_5Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 130px;
+            padding-right: 130px;
+            background-color: #D4EDDA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-202.5%,-10%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #ans2_5{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 181px;
+            padding-right: 181px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-201.5%,130%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans2_5:hover{
+            transform: translate(-201.5%,130%) scale(1.1);      
+        }
+        #ans2_5Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 181px;
+            padding-right: 181px;
+            background-color: #F8D7DA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-201.5%,130%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #nextBtn5{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: #766FE9;
+            border: 5px solid #686A65;
+            border-radius: 15px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-110%,300%);
+            z-index: 11;
+        }
+        #redBar5{
+            position: absolute;
+            padding: 25px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: #C64343;
+            border: none;
+            transform: translate(-640%,70%);
+            z-index: 11;
+            animation: anim5 1200ms ease-in-out 1;
+            animation-play-state: paused;
+        }
+        @keyframes anim5{
+            0%{
+                transform: translate(-740%,70%);
+            }
+            100%{
+                transform: translate(-640%,70%);
+            }
+        }
+
+        #hint6{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 12.3px;
+            color: #000000;
+            margin-top: -20px;
+            text-shadow: none;
+            position: absolute;
+            text-align: center;
+            transform: translate(-132%,60%);
+            z-index: 11;
+            white-space: nowrap;
+        }
+        #questnum6{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #82902A;
+            padding: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #EEEA0E;
+            border: 1px solid #000000;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-443%,-560%);
+            z-index: 11;
+        }
+        #question6{
+            font-family: "Slackey", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.9rem;
+            text-shadow: none;
+            color: #6B1010;
+            position: absolute;
+            transform: translate(-137.5%,-190%);
+            z-index: 11;
+            white-space: nowrap;
+            text-align: center;
+        }
+        #ans1_6{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 32px;
+            padding-left: 67px;
+            padding-right: 67px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-138%,-10%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans1_6:hover{
+            transform: translate(-138%,-10%) scale(1.1);
+        }
+        #ans1_6Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 32px;
+            padding-left: 67px;
+            padding-right: 67px;
+            background-color: #F8D7DA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-138%,-10%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #ans2_6{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 32px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-138%,100%);
+            z-index: 11;
+            transition: 700ms;
+        }
+        #ans2_6:hover{
+            transform: translate(-138%,100%) scale(1.1);      
+        }
+        #ans2_6Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 32px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #D4EDDA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-138%,100%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #nextBtn6{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: #766FE9;
+            border: 5px solid #686A65;
+            border-radius: 15px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-110%,300%);
+            z-index: 11;
+        }
+        #redBar6{
+            position: absolute;
+            padding: 25px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: #C64343;
+            border: none;
+            transform: translate(-540%,70%);
+            z-index: 11;
+            animation: anim6 1200ms ease-in-out 1;
+            animation-play-state: paused;
+        }
+        @keyframes anim6{
+            0%{
+                transform: translate(-640%,70%);
+            }
+            100%{
+                transform: translate(-540%,70%);
+            }
+        }
+
+        #hint7{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 15px;
+            color: #000000;
+            margin-top: -20px;
+            text-shadow: none;
+            position: absolute;
+            text-align: center;
+            transform: translate(-144%,70%);
+            z-index: 11;
+            white-space: nowrap;
+        }
+        #questnum7{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #82902A;
+            padding: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #EEEA0E;
+            border: 1px solid #000000;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-443%,-560%);
+            z-index: 11;
+        }
+        #question7{
+            font-family: "Slackey", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.9rem;
+            text-shadow: none;
+            color: #6B1010;
+            position: absolute;
+            transform: translate(-180%,-425%);
+            z-index: 11;
+            white-space: nowrap;
+            text-align: center;
+        }
+        #ans1_7{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 85px;
+            padding-right: 85px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-152%,-10%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans1_7:hover{
+            transform: translate(-152%,-10%) scale(1.1);
+        }
+        #ans1_7Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 85px;
+            padding-right: 85px;
+            background-color: #F8D7DA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-152%,-10%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #ans2_7{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 48px;
+            padding-right: 48px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-152%,120%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans2_7:hover{
+            transform: translate(-152%,120%) scale(1.1);      
+        }
+        #ans2_7Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 48px;
+            padding-right: 48px;
+            background-color: #D4EDDA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-152%,120%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #nextBtn7{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: #766FE9;
+            border: 5px solid #686A65;
+            border-radius: 15px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-110%,300%);
+            z-index: 11;
+        }
+        #redBar7{
+            position: absolute;
+            padding: 25px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: #C64343;
+            border: none;
+            transform: translate(-440%,70%);
+            z-index: 11;
+            animation: anim7 1200ms ease-in-out 1;
+            animation-play-state: paused;
+        }
+        @keyframes anim7{
+            0%{
+                transform: translate(-540%,70%);
+            }
+            100%{
+                transform: translate(-440%,70%);
+            }
+        }
+
+        #hint8{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 13px;
+            color: #000000;
+            margin-top: -20px;
+            text-shadow: none;
+            position: absolute;
+            text-align: center;
+            transform: translate(-135%,55%);
+            z-index: 11;
+            white-space: nowrap;
+        }
+        #questnum8{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #82902A;
+            padding: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #EEEA0E;
+            border: 1px solid #000000;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-443%,-560%);
+            z-index: 11;
+        }
+        #question8{
+            font-family: "Slackey", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.9rem;
+            text-shadow: none;
+            color: #6B1010;
+            position: absolute;
+            transform: translate(-148.5%,-190%);
+            z-index: 11;
+            white-space: nowrap;
+            text-align: center;
+        }
+        #ans1_8{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-153%,-10%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans1_8:hover{
+            transform: translate(-153%,-10%) scale(1.1);
+        }
+        #ans1_8Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: #F8D7DA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-153%,-10%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #ans2_8{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 106px;
+            padding-right: 106px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-153%,115%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans2_8:hover{
+            transform: translate(-153%,115%) scale(1.1);      
+        }
+        #ans2_8Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 106px;
+            padding-right: 106px;
+            background-color: #D4EDDA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-153%,115%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #nextBtn8{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: #766FE9;
+            border: 5px solid #686A65;
+            border-radius: 15px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-110%,300%);
+            z-index: 11;
+        }
+        #redBar8{
+            position: absolute;
+            padding: 25px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: #C64343;
+            border: none;
+            transform: translate(-340%,70%);
+            z-index: 11;
+            animation: anim8 1200ms ease-in-out 1;
+            animation-play-state: paused;
+        }
+        @keyframes anim8{
+            0%{
+                transform: translate(-440%,70%);
+            }
+            100%{
+                transform: translate(-340%,70%);
+            }
+        }
+
+        #hint9{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 15px;
+            color: #000000;
+            margin-top: -20px;
+            text-shadow: none;
+            position: absolute;
+            text-align: center;
+            transform: translate(-135%,70%);
+            z-index: 11;
+            white-space: nowrap;
+        }
+        #questnum9{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #82902A;
+            padding: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #EEEA0E;
+            border: 1px solid #000000;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-443%,-560%);
+            z-index: 11;
+        }
+        #question9{
+            font-family: "Slackey", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.9rem;
+            text-shadow: none;
+            color: #6B1010;
+            position: absolute;
+            transform: translate(-168%,-430%);
+            z-index: 11;
+            white-space: nowrap;
+            text-align: center;
+        }
+        #ans1_9{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 45px;
+            padding-right: 45px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-149%,-10%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans1_9:hover{
+            transform: translate(-149%,-10%) scale(1.1);
+        }
+        #ans1_9Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 45px;
+            padding-right: 45px;
+            background-color: #D4EDDA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-149%,-10%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #ans2_9{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 60px;
+            padding-left: 70px;
+            padding-right: 70px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-149%,115%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans2_9:hover{
+            transform: translate(-149%,115%) scale(1.1);      
+        }
+        #ans2_9Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 60px;
+            padding-left: 70px;
+            padding-right: 70px;
+            background-color: #F8D7DA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-149%,115%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #nextBtn9{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: #766FE9;
+            border: 5px solid #686A65;
+            border-radius: 15px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-110%,300%);
+            z-index: 11;
+        }
+        #redBar9{
+            position: absolute;
+            padding: 25px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: #C64343;
+            border: none;
+            transform: translate(-240%,70%);
+            z-index: 11;
+            animation: anim9 1200ms ease-in-out 1;
+            animation-play-state: paused;
+        }
+        @keyframes anim9{
+            0%{
+                transform: translate(-340%,70%);
+            }
+            100%{
+                transform: translate(-240%,70%);
+            }
+        }
+
+        #hint10{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 12.3px;
+            color: #000000;
+            margin-top: -20px;
+            text-shadow: none;
+            position: absolute;
+            text-align: center;
+            transform: translate(-140%,64%);
+            z-index: 11;
+            white-space: nowrap;
+        }
+        #questnum10{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #82902A;
+            padding: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #EEEA0E;
+            border: 1px solid #000000;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-409.5%,-560%);
+            z-index: 11;
+        }
+        #question10{
+            font-family: "Slackey", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.9rem;
+            text-shadow: none;
+            color: #6B1010;
+            position: absolute;
+            transform: translate(-140%,-430%);
+            z-index: 11;
+            white-space: nowrap;
+            text-align: center;
+        }
+        #ans1_10{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-175.5%,-10%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans1_10:hover{
+            transform: translate(-175.5%,-10%) scale(1.1);
+        }
+        #ans1_10Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: #D4EDDA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-175.5%,-10%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #ans2_10{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 52px;
+            padding-right: 52px;
+            background-color: #FFFFFF;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-175.5%, 115%);
+            z-index: 11;
+            transition: transform 0.4s ease-in-out;
+        }
+        #ans2_10:hover{
+            transform: translate(-175.5%, 115%) scale(1.1);      
+        }
+        #ans2_10Next{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #333333;
+            padding: 42px;
+            padding-left: 52px;
+            padding-right: 52px;
+            background-color: #F8D7DA;
+            border: 5px solid #443E3E;
+            border-radius: 20px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-175.5%, 115%);
+            z-index: 11;
+            transition: 1s;
+        }
+        #nextBtn10{
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            justify-content: center;
+            align-self: center;
+            color: #FFFFFF;
+            padding: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: #766FE9;
+            border: 5px solid #686A65;
+            border-radius: 15px;
+            position: absolute;
+            white-space: nowrap;
+            transform: translate(-110%,300%);
+            z-index: 11;
+        }
+        #redBar10{
+            position: absolute;
+            padding: 25px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: #C64343;
+            border: none;
+            transform: translate(-140%,70%);
+            z-index: 11;
+            animation: anim10 1200ms ease-in-out 1;
+            animation-play-state: paused;
+        }
+        @keyframes anim10{
+            0%{
+                transform: translate(-240%,70%);
+            }
+            100%{
+                transform: translate(-140%,70%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img id="bg" src="finalbg.png" alt="bg">
+    <img id="shade1" src="shade1.png" alt="shade">
+
+    <hr id="line1">
+    <hr id="line2">
+    <hr id="line3">
+    <hr id="line4">
+
+    <img id="doctor" src="doctor.gif" alt="doc">
+    <img id="textbox" src="textbox.png" alt="textbox">
+
+    <p id="hint">Fikirkan<br>perkara yang<br>datang secara<br>berpasangan.</p>
+
+    <button id="questnum">Soalan 1/10</button>
+    <button id="greyBar"></button>
+    <button id="redBar"></button>
+
+    <img id="love" src="love.png" alt="love">
+
+    <p id="title">Mari uji pengetahuan anda!</p>
+    <p id="question">Antara berikut, yang manakah empat<br>ruang utama jantung?</p>
+
+    <button id="ans1">Ventrikel kiri, Ventrikel<br>kanan, Septum, Aorta</button>
+    <button id="ans2">Atrium kanan, Atrium kiri,<br>Ventrikel kanan, Ventrikel<br>kiri</button>
+
+    <button id="nextBtn">SETERUSNYA</button>
+
+
+
+    <button id="questnum2">Soalan 2/10</button>
+    <p id="hint2">Ia memainkan<br>peranan dalam<br>mengekalkan<br>perkara yang<br>berasingan di<br>dalam hati.</p>
+
+    <button id="redBar2"></button>
+
+    <p id="question2">Apakah fungsi septum dalam jantung?</p>
+
+    <button id="ans1_2">Menghalang darah daripada<br>mengalir ke belakang</button>
+    <button id="ans2_2">Mengasingkan darah<br>beroksigen dan terdeoksigen</button>
+
+    <button id="nextBtn2">SETERUSNYA</button>
+
+
+
+
+    <button id="questnum3">Soalan 3/10</button>
+    <p id="hint3">Ia mempunyai<br>tugas terbesar<br>untuk<br>menghantar<br>darah keluar.</p>
+
+    <button id="redBar3"></button>
+
+    <p id="question3">Ruang manakah yang mempunyai dinding<br>paling tebal?</p>
+
+    <button id="ans1_3">Ventrikel kiri</button>
+    <button id="ans2_3">Ventrikel kanan</button>
+
+    <button id="nextBtn3">SETERUSNYA</button>
+
+
+
+    <button id="questnum4">Soalan 4/10</button>
+    <p id="hint4">Injap ini<br>mempunyai dua<br>cuping dan<br>mengawal<br>aliran darah<br>bahagian kiri.</p>
+
+    <button id="redBar4"></button>
+
+    <p id="question4">Injap manakah terletak di antara atrium kiri<br>dan ventrikel kiri?</p>
+
+    <button id="ans1_4">Injap bikuspid</button>
+    <button id="ans2_4">Injap sabit</button>
+
+    <button id="nextBtn4">SETERUSNYA</button>
+
+
+
+    <button id="questnum5">Soalan 5/10</button>
+    <p id="hint5">Ia mengumpul<br>darah yang<br>kembali dari<br>seluruh<br>badan.</p>
+
+    <button id="redBar5"></button>
+
+    <p id="question5">Salur darah manakah yang membawa darah<br>terdeoksigen ke dalam atrium kanan?</p>
+
+    <button id="ans1_5">Vena kava</button>
+    <button id="ans2_5">Aorta</button>
+
+    <button id="nextBtn5">SETERUSNYA</button>
+
+
+
+
+    <button id="questnum6">Soalan 6/10</button>
+    <p id="hint6">Mulakan<br>dengan kanan,<br>ke paru-paru,<br>kemudian<br>bergerak ke<br>kiri.</p>
+
+    <button id="redBar6"></button>
+
+    <p id="question6">Apakah laluan darah yang betul bermula dari<br>vena kava?</p>
+
+    <button id="ans1_6">Vena kava >> Atrium kiri >><br>Paru-paru >> Atrium kanan >><br>Ventrikel kiri >> Badan</button>
+    <button id="ans2_6">Vena kava >> Atrium kanan >><br>Ventrikel kanan >> Paru-paru >><br>Atrium kiri >> Ventrikel kiri<br>>> Badan</button>
+
+    <button id="nextBtn6">SETERUSNYA</button>
+
+
+
+    <button id="questnum7">Soalan 7/10</button>
+    <p id="hint7">Ia unik<br>berbanding<br>kebanyakan<br>vena.</p>
+
+    <button id="redBar7"></button>
+
+    <p id="question7">Apakah fungsi vena pulmonari?</p>
+
+    <button id="ans1_7">Mengepam darah ke otak</button>
+    <button id="ans2_7">Membawa darah beroksigen<br>dari paru-paru ke jantung</button>
+
+    <button id="nextBtn7">SETERUSNYA</button>
+
+
+
+
+    <button id="questnum8">Soalan 8/10</button>
+    <p id="hint8">Jarak adalah<br>penting<br>apabila<br>mengepam<br>darah<br>keluar.</p>
+
+    <button id="redBar8"></button>
+    <p id="question8">Mengapa dinding ventrikel kiri lebih tebal<br>daripada ventrikel kanan?</p>
+
+    <button id="ans1_8">Ia lebih dekat dengan paru-<br>paru</button>
+    <button id="ans2_8">Ia mengepam darah ke<br>seluruh badan</button>
+
+    <button id="nextBtn8">SETERUSNYA</button>
+
+
+
+
+    <button id="questnum9">Soalan 9/10</button>
+    <p id="hint9">Ia<br>mengekalkan<br>irama<br>jantung.</p>
+
+    <button id="redBar9"></button>
+    <p id="question9">Apakah fungsi nod sinoatrial (SA)?</p>
+
+    <button id="ans1_9">Bertindak sebagai perentak<br>jantung semula jadi</button>
+    <button id="ans2_9">Mengepam darah ke peparu</button>
+
+    <button id="nextBtn9">SETERUSNYA</button>
+
+
+
+    <button id="questnum10">Soalan 10/10</button>
+    <p id="hint10">Isyarat<br>bermula dari<br>atas sebelum<br>sampai ke<br>bawah.</p>
+
+    <button id="redBar10"></button>
+    <p id="question10">Apakah urutan degupan jantung yang betul?</p>
+
+    <button id="ans1_10">Nod SA >> Nod AV >><br>Pengecutan ventrikel</button>
+    <button id="ans2_10">Nod AV >> Nod SA >><br>Pengecutan atrium</button>
+
+    <a href="goodjobMalay.html">
+    <button id="nextBtn10">SETERUSNYA</button>
+    </a>
+
+
+
+    <script>
+        const ans1 = document.getElementById("ans1");
+        const ans2 = document.getElementById("ans2");
+        const nextBtn = document.getElementById("nextBtn");
+        const doctor = document.getElementById("doctor");
+        const hint = document.getElementById("hint");
+        const textbox = document.getElementById("textbox");
+        const questnum = document.getElementById("questnum");
+        const question = document.getElementById("question");
+
+        nextBtn.style.visibility = "hidden";
+
+        ans1.onclick = function(){
+            ans1.id = "ansFalse";
+            ans2.id = "ansTrue";
+
+            ans1.style.pointerEvents = "none";
+            ans2.style.pointerEvents = "none";
+
+            nextBtn.style.visibility = "visible";
+            doctor.style.visibility = "hidden";
+            hint.style.visibility = "hidden";
+            textbox.style.visibility = "hidden";
+        }
+
+        ans2.onclick = function(){
+            ans1.id = "ansFalse";
+            ans2.id = "ansTrue";
+
+            ans1.style.pointerEvents = "none";
+            ans2.style.pointerEvents = "none";
+
+            nextBtn.style.visibility = "visible";
+            doctor.style.visibility = "hidden";
+            hint.style.visibility = "hidden";
+            textbox.style.visibility = "hidden";
+        }
+
+
+
+
+        const questnum2 = document.getElementById("questnum2");
+        const hint2 = document.getElementById("hint2");
+        const question2 = document.getElementById("question2");
+        const ans1_2 = document.getElementById("ans1_2");
+        const ans2_2 = document.getElementById("ans2_2");
+        const nextBtn2 = document.getElementById("nextBtn2");
+        const redBar2 = document.getElementById("redBar2");
+
+        questnum2.style.visibility = "hidden";
+        hint2.style.visibility = "hidden";
+        question2.style.visibility = "hidden";
+        ans1_2.style.visibility = "hidden";
+        ans2_2.style.visibility = "hidden";
+        nextBtn2.style.visibility = "hidden";
+
+        nextBtn.onclick = function(){
+            nextBtn.style.visibility = "hidden";
+
+            doctor.style.visibility = "visible";
+            textbox.style.visibility = "visible";
+
+            questnum.style.visibility = "hidden";
+            hint.style.visibility = "hidden";
+            question.style.visibility = "hidden";
+            ans1.style.visibility = "hidden";
+            ans2.style.visibility = "hidden";
+
+            questnum2.style.visibility = "visible";
+            hint2.style.visibility = "visible";
+            question2.style.visibility = "visible";
+            ans1_2.style.visibility = "visible";
+            ans2_2.style.visibility = "visible";
+
+            redBar2.style.animationPlayState = "running";
+        }
+        ans1_2.onclick = function(){
+            ans1_2.id = "ans1_2Next";
+            ans2_2.id = "ans2_2Next";
+
+            ans1_2.style.pointerEvents = "none";
+            ans2_2.style.pointerEvents = "none";
+
+            nextBtn2.style.visibility = "visible";
+            doctor.style.visibility = "hidden";
+            hint2.style.visibility = "hidden";
+            textbox.style.visibility = "hidden";
+        }
+        ans2_2.onclick = function(){
+            ans1_2.id = "ans1_2Next";
+            ans2_2.id = "ans2_2Next";
+
+            ans1_2.style.pointerEvents = "none";
+            ans2_2.style.pointerEvents = "none";
+
+            nextBtn2.style.visibility = "visible";
+            doctor.style.visibility = "hidden";
+            hint2.style.visibility = "hidden";
+            textbox.style.visibility = "hidden";
+        }
+
+
+        const questnum3 = document.getElementById("questnum3");
+        const hint3 = document.getElementById("hint3");
+        const question3 = document.getElementById("question3");
+        const ans1_3 = document.getElementById("ans1_3");
+        const ans2_3 = document.getElementById("ans2_3");
+        const nextBtn3 = document.getElementById("nextBtn3");
+        const redBar3 = document.getElementById("redBar3");
+
+        questnum3.style.visibility = "hidden";
+        hint3.style.visibility = "hidden";
+        question3.style.visibility = "hidden";
+        ans1_3.style.visibility = "hidden";
+        ans2_3.style.visibility = "hidden";
+        nextBtn3.style.visibility = "hidden";
+        redBar3.style.visibility = "hidden";
+
+        nextBtn2.onclick = function(){
+            nextBtn2.style.visibility = "hidden";
+
+            doctor.style.visibility = "visible";
+            textbox.style.visibility = "visible";
+
+            questnum2.style.visibility = "hidden";
+            hint2.style.visibility = "hidden";
+            question2.style.visibility = "hidden";
+            ans1_2.style.display = "none";
+
+            ans2_2.style.display = "none";
+
+            questnum3.style.visibility = "visible";
+            hint3.style.visibility = "visible";
+            question3.style.visibility = "visible";
+            ans1_3.style.visibility = "visible";
+            ans2_3.style.visibility = "visible";
+
+            redBar3.style.visibility = "visible";
+            redBar3.style.animationPlayState = "running";
+        }
+
+        const displayThirdQuestion = function(){
+            ans1_3.id = "ans1_3Next";
+            ans2_3.id = "ans2_3Next";
+
+            ans1_3.style.pointerEvents = "none";
+            ans2_3.style.pointerEvents = "none";
+
+            nextBtn3.style.visibility = "visible";
+            doctor.style.visibility = "hidden";
+            hint3.style.visibility = "hidden";
+            textbox.style.visibility = "hidden";
+        }
+
+        ans1_3.onclick = displayThirdQuestion;
+        ans2_3.onclick = displayThirdQuestion;
+
+        
+
+
+        const questnum4 = document.getElementById("questnum4");
+        const hint4 = document.getElementById("hint4");
+        const question4 = document.getElementById("question4");
+        const ans1_4 = document.getElementById("ans1_4");
+        const ans2_4 = document.getElementById("ans2_4");
+        const nextBtn4 = document.getElementById("nextBtn4");
+        const redBar4 = document.getElementById("redBar4");
+
+        questnum4.style.visibility = "hidden";
+        hint4.style.visibility = "hidden";
+        question4.style.visibility = "hidden";
+        ans1_4.style.visibility = "hidden";
+        ans2_4.style.visibility = "hidden";
+        nextBtn4.style.visibility = "hidden";
+        redBar4.style.visibility = "hidden";
+
+        nextBtn3.onclick = function(){
+            nextBtn3.style.visibility = "hidden";
+
+            doctor.style.visibility = "visible";
+            textbox.style.visibility = "visible";
+
+            questnum3.style.visibility = "hidden";
+            hint3.style.visibility = "hidden";
+            question3.style.visibility = "hidden";
+            ans1_3.style.display = "none";
+
+            ans2_3.style.display = "none";
+
+            questnum4.style.visibility = "visible";
+            hint4.style.visibility = "visible";
+            question4.style.visibility = "visible";
+            ans1_4.style.visibility = "visible";
+            ans2_4.style.visibility = "visible";
+
+            redBar4.style.visibility = "visible";
+            redBar4.style.animationPlayState = "running";
+        }
+
+        const displayFourthQuestion = function(){
+            ans1_4.id = "ans1_4Next";
+            ans2_4.id = "ans2_4Next";
+
+            ans1_4.style.pointerEvents = "none";
+            ans2_4.style.pointerEvents = "none";
+
+            nextBtn4.style.visibility = "visible";
+            doctor.style.visibility = "hidden";
+            hint4.style.visibility = "hidden";
+            textbox.style.visibility = "hidden";
+        }
+
+        ans1_4.onclick = displayFourthQuestion;
+        ans2_4.onclick = displayFourthQuestion;
+
+
+
+
+
+
+        const questnum5 = document.getElementById("questnum5");
+        const hint5 = document.getElementById("hint5");
+        const question5 = document.getElementById("question5");
+        const ans1_5 = document.getElementById("ans1_5");
+        const ans2_5 = document.getElementById("ans2_5");
+        const nextBtn5 = document.getElementById("nextBtn5");
+        const redBar5 = document.getElementById("redBar5");
+
+        questnum5.style.visibility = "hidden";
+        hint5.style.visibility = "hidden";
+        question5.style.visibility = "hidden";
+        ans1_5.style.visibility = "hidden";
+        ans2_5.style.visibility = "hidden";
+        nextBtn5.style.visibility = "hidden";
+        redBar5.style.visibility = "hidden";
+
+        nextBtn4.onclick = function(){
+            nextBtn4.style.visibility = "hidden";
+
+            doctor.style.visibility = "visible";
+            textbox.style.visibility = "visible";
+
+            questnum4.style.visibility = "hidden";
+            hint4.style.visibility = "hidden";
+            question4.style.visibility = "hidden";
+            ans1_4.style.display = "none";
+
+            ans2_4.style.display = "none";
+
+            questnum5.style.visibility = "visible";
+            hint5.style.visibility = "visible";
+            question5.style.visibility = "visible";
+            ans1_5.style.visibility = "visible";
+            ans2_5.style.visibility = "visible";
+
+            redBar5.style.visibility = "visible";
+            redBar5.style.animationPlayState = "running";
+        }
+
+        const displayFifthQuestion = function(){
+            ans1_5.id = "ans1_5Next";
+            ans2_5.id = "ans2_5Next";
+
+            ans1_5.style.pointerEvents = "none";
+            ans2_5.style.pointerEvents = "none";
+
+            nextBtn5.style.visibility = "visible";
+            doctor.style.visibility = "hidden";
+            hint5.style.visibility = "hidden";
+            textbox.style.visibility = "hidden";
+        }
+
+        ans1_5.onclick = displayFifthQuestion;
+        ans2_5.onclick = displayFifthQuestion;
+
+
+
+
+
+        const questnum6 = document.getElementById("questnum6");
+        const hint6 = document.getElementById("hint6");
+        const question6 = document.getElementById("question6");
+        const ans1_6 = document.getElementById("ans1_6");
+        const ans2_6 = document.getElementById("ans2_6");
+        const nextBtn6 = document.getElementById("nextBtn6");
+        const redBar6 = document.getElementById("redBar6");
+
+        questnum6.style.visibility = "hidden";
+        hint6.style.visibility = "hidden";
+        question6.style.visibility = "hidden";
+        ans1_6.style.visibility = "hidden";
+        ans2_6.style.visibility = "hidden";
+        nextBtn6.style.visibility = "hidden";
+        redBar6.style.visibility = "hidden";
+
+        nextBtn5.onclick = function(){
+            nextBtn5.style.visibility = "hidden";
+
+            doctor.style.visibility = "visible";
+            textbox.style.visibility = "visible";
+
+            questnum5.style.visibility = "hidden";
+            hint5.style.visibility = "hidden";
+            question5.style.visibility = "hidden";
+            ans1_5.style.display = "none";
+
+            ans2_5.style.display = "none";
+
+            questnum6.style.visibility = "visible";
+            hint6.style.visibility = "visible";
+            question6.style.visibility = "visible";
+            ans1_6.style.visibility = "visible";
+            ans2_6.style.visibility = "visible";
+
+            redBar6.style.visibility = "visible";
+            redBar6.style.animationPlayState = "running";
+        }
+
+        const displaySixthQuestion = function(){
+            ans1_6.id = "ans1_6Next";
+            ans2_6.id = "ans2_6Next";
+
+            ans1_6.style.pointerEvents = "none";
+            ans2_6.style.pointerEvents = "none";
+
+            nextBtn6.style.visibility = "visible";
+            doctor.style.visibility = "hidden";
+            hint6.style.visibility = "hidden";
+            textbox.style.visibility = "hidden";
+        }
+
+        ans1_6.onclick = displaySixthQuestion;
+        ans2_6.onclick = displaySixthQuestion;
+
+
+
+
+
+
+
+        const questnum7 = document.getElementById("questnum7");
+        const hint7 = document.getElementById("hint7");
+        const question7 = document.getElementById("question7");
+        const ans1_7 = document.getElementById("ans1_7");
+        const ans2_7 = document.getElementById("ans2_7");
+        const nextBtn7 = document.getElementById("nextBtn7");
+        const redBar7 = document.getElementById("redBar7");
+
+        questnum7.style.visibility = "hidden";
+        hint7.style.visibility = "hidden";
+        question7.style.visibility = "hidden";
+        ans1_7.style.visibility = "hidden";
+        ans2_7.style.visibility = "hidden";
+        nextBtn7.style.visibility = "hidden";
+        redBar7.style.visibility = "hidden";
+
+        nextBtn6.onclick = function(){
+            nextBtn6.style.visibility = "hidden";
+
+            doctor.style.visibility = "visible";
+            textbox.style.visibility = "visible";
+
+            questnum6.style.visibility = "hidden";
+            hint6.style.visibility = "hidden";
+            question6.style.visibility = "hidden";
+            ans1_6.style.display = "none";
+
+            ans2_6.style.display = "none";
+
+            questnum7.style.visibility = "visible";
+            hint7.style.visibility = "visible";
+            question7.style.visibility = "visible";
+            ans1_7.style.visibility = "visible";
+            ans2_7.style.visibility = "visible";
+
+            redBar7.style.visibility = "visible";
+            redBar7.style.animationPlayState = "running";
+        }
+
+        const displaySeventhQuestion = function(){
+            ans1_7.id = "ans1_7Next";
+            ans2_7.id = "ans2_7Next";
+
+            ans1_7.style.pointerEvents = "none";
+            ans2_7.style.pointerEvents = "none";
+
+            nextBtn7.style.visibility = "visible";
+            doctor.style.visibility = "hidden";
+            hint7.style.visibility = "hidden";
+            textbox.style.visibility = "hidden";
+        }
+
+        ans1_7.onclick = displaySeventhQuestion;
+        ans2_7.onclick = displaySeventhQuestion;
+
+
+
+
+
+        const questnum8 = document.getElementById("questnum8");
+        const hint8 = document.getElementById("hint8");
+        const question8 = document.getElementById("question8");
+        const ans1_8 = document.getElementById("ans1_8");
+        const ans2_8 = document.getElementById("ans2_8");
+        const nextBtn8 = document.getElementById("nextBtn8");
+        const redBar8 = document.getElementById("redBar8");
+
+        questnum8.style.visibility = "hidden";
+        hint8.style.visibility = "hidden";
+        question8.style.visibility = "hidden";
+        ans1_8.style.visibility = "hidden";
+        ans2_8.style.visibility = "hidden";
+        nextBtn8.style.visibility = "hidden";
+        redBar8.style.visibility = "hidden";
+
+        nextBtn7.onclick = function(){
+            nextBtn7.style.visibility = "hidden";
+
+            doctor.style.visibility = "visible";
+            textbox.style.visibility = "visible";
+
+            questnum7.style.visibility = "hidden";
+            hint7.style.visibility = "hidden";
+            question7.style.visibility = "hidden";
+            ans1_7.style.display = "none";
+
+            ans2_7.style.display = "none";
+
+            questnum8.style.visibility = "visible";
+            hint8.style.visibility = "visible";
+            question8.style.visibility = "visible";
+            ans1_8.style.visibility = "visible";
+            ans2_8.style.visibility = "visible";
+
+            redBar8.style.visibility = "visible";
+            redBar8.style.animationPlayState = "running";
+        }
+
+        const displayEightQuestion = function(){
+            ans1_8.id = "ans1_8Next";
+            ans2_8.id = "ans2_8Next";
+
+            ans1_8.style.pointerEvents = "none";
+            ans2_8.style.pointerEvents = "none";
+
+            nextBtn8.style.visibility = "visible";
+            doctor.style.visibility = "hidden";
+            hint8.style.visibility = "hidden";
+            textbox.style.visibility = "hidden";
+        }
+
+        ans1_8.onclick = displayEightQuestion;
+        ans2_8.onclick = displayEightQuestion;
+
+
+
+
+
+
+
+        const questnum9 = document.getElementById("questnum9");
+        const hint9 = document.getElementById("hint9");
+        const question9 = document.getElementById("question9");
+        const ans1_9 = document.getElementById("ans1_9");
+        const ans2_9 = document.getElementById("ans2_9");
+        const nextBtn9 = document.getElementById("nextBtn9");
+        const redBar9 = document.getElementById("redBar9");
+
+        questnum9.style.visibility = "hidden";
+        hint9.style.visibility = "hidden";
+        question9.style.visibility = "hidden";
+        ans1_9.style.visibility = "hidden";
+        ans2_9.style.visibility = "hidden";
+        nextBtn9.style.visibility = "hidden";
+        redBar9.style.visibility = "hidden";
+
+        nextBtn8.onclick = function(){
+            nextBtn8.style.visibility = "hidden";
+
+            doctor.style.visibility = "visible";
+            textbox.style.visibility = "visible";
+
+            questnum8.style.visibility = "hidden";
+            hint8.style.visibility = "hidden";
+            question8.style.visibility = "hidden";
+            ans1_8.style.display = "none";
+
+            ans2_8.style.display = "none";
+
+            questnum9.style.visibility = "visible";
+            hint9.style.visibility = "visible";
+            question9.style.visibility = "visible";
+            ans1_9.style.visibility = "visible";
+            ans2_9.style.visibility = "visible";
+
+            redBar9.style.visibility = "visible";
+            redBar9.style.animationPlayState = "running";
+        }
+
+        const displayNinthQuestion = function(){
+            ans1_9.id = "ans1_9Next";
+            ans2_9.id = "ans2_9Next";
+
+            ans1_9.style.pointerEvents = "none";
+            ans2_9.style.pointerEvents = "none";
+
+            nextBtn9.style.visibility = "visible";
+            doctor.style.visibility = "hidden";
+            hint9.style.visibility = "hidden";
+            textbox.style.visibility = "hidden";
+        }
+
+        ans1_9.onclick = displayNinthQuestion;
+        ans2_9.onclick = displayNinthQuestion;
+
+
+
+
+
+
+
+
+        const questnum10 = document.getElementById("questnum10");
+        const hint10 = document.getElementById("hint10");
+        const question10 = document.getElementById("question10");
+        const ans1_10 = document.getElementById("ans1_10");
+        const ans2_10 = document.getElementById("ans2_10");
+        const nextBtn10 = document.getElementById("nextBtn10");
+        const redBar10 = document.getElementById("redBar10");
+
+        questnum10.style.visibility = "hidden";
+        hint10.style.visibility = "hidden";
+        question10.style.visibility = "hidden";
+        ans1_10.style.visibility = "hidden";
+        ans2_10.style.visibility = "hidden";
+        nextBtn10.style.visibility = "hidden";
+        redBar10.style.visibility = "hidden";
+
+        nextBtn9.onclick = function(){
+            nextBtn9.style.visibility = "hidden";
+
+            doctor.style.visibility = "visible";
+            textbox.style.visibility = "visible";
+
+            questnum9.style.visibility = "hidden";
+            hint9.style.visibility = "hidden";
+            question9.style.visibility = "hidden";
+            ans1_9.style.display = "none";
+
+            ans2_9.style.display = "none";
+
+            questnum10.style.visibility = "visible";
+            hint10.style.visibility = "visible";
+            question10.style.visibility = "visible";
+            ans1_10.style.visibility = "visible";
+            ans2_10.style.visibility = "visible";
+
+            redBar10.style.visibility = "visible";
+            redBar10.style.animationPlayState = "running";
+        }
+
+        const displayTenthQuestion = function(){
+            ans1_10.id = "ans1_10Next";
+            ans2_10.id = "ans2_10Next";
+
+            ans1_10.style.pointerEvents = "none";
+            ans2_10.style.pointerEvents = "none";
+
+            nextBtn10.style.visibility = "visible";
+            doctor.style.visibility = "hidden";
+            hint10.style.visibility = "hidden";
+            textbox.style.visibility = "hidden";
+        }
+
+        ans1_10.onclick = displayTenthQuestion;
+        ans2_10.onclick = displayTenthQuestion;
+
+    </script>
+</body>
+</html>

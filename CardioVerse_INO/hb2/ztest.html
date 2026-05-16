@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #timer {
+      font-size: 2rem;
+      font-family: 'DSEG7-7SEGG';
+    src: url('../fonts/DSEG7-7SEGG-CHAN/DSEG7SEGGCHAN-Regular.woff2') format('woff2'),
+  url('../fonts/DSEG7-7SEGG-CHAN/DSEG7SEGGCHAN-Regular.woff') format('woff'),
+  url('../fonts/DSEG7-7SEGG-CHAN/DSEG7SEGGCHAN-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Countdown Timer</h1>
+  <div id="timer">10</div>
+  <button onclick="startTimer()">Start</button>
+  <button onclick="resetTimer()">Reset</button>
+
+  <script>
+    let time = 10;       // starting time in seconds
+    let timerId = null;  // to store the interval
+
+    function updateDisplay() {
+      document.getElementById("timer").textContent = time;
+    }
+
+    function startTimer() {
+      if (timerId !== null) return; // prevent multiple intervals
+
+      timerId = setInterval(() => {
+        if (time > 0) {
+          time--;
+          updateDisplay();
+        } else {
+          clearInterval(timerId);
+          timerId = null;
+          alert("Time's up!");
+        }
+      }, 1000);
+    }
+
+    function resetTimer() {
+      clearInterval(timerId);
+      timerId = null;
+      time = 10;
+      updateDisplay();
+    }
+
+    // show initial time
+    updateDisplay();
+    startTimer();
+  </script>
+</body>
+</html>
